@@ -32,6 +32,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,15 +69,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="common\banner.html" />
-    <Content Include="common\footer.html" />
-    <Content Include="common\nav.html" />
-    <Content Include="css\BannerStyleSheet.css" />
-    <Content Include="css\FooterStyleSheet.css" />
-    <Content Include="css\NavStyleSheet.css" />
-    <Content Include="css\PrimaryStyleSheet.css" />
+    <Content Include="AboutUs.aspx" />
+    <Content Include="css\MasterStyleSheet.css" />
     <Content Include="css\ReducedStyleSheet.css" />
     <Content Include="Index.aspx" />
+    <Content Include="media\img\Background.jpg" />
     <Content Include="media\img\Banner.png" />
     <Content Include="media\img\Logo.png" />
     <Content Include="media\img\TabIcon.png" />
@@ -84,6 +81,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -91,9 +95,17 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MainSetup.Master.cs">
+      <DependentUpon>MainSetup.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainSetup.Master.designer.cs">
+      <DependentUpon>MainSetup.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MainSetup.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -104,11 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="media\font\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Index.aspx.resx">
-      <DependentUpon>Index.aspx.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

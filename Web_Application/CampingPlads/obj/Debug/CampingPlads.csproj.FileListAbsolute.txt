@@ -57,5 +57,3 @@ C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\obj\D
 C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\obj\Debug\CampingPlads.csproj.CopyComplete
 C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\obj\Debug\CampingPlads.dll
 C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\obj\Debug\CampingPlads.pdb
-C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\obj\Debug\CampingPlads.Index.resources
-C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\obj\Debug\CampingPlads.csproj.GenerateResource.cache
