@@ -53,6 +53,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,7 +68,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="common\banner.html" />
+    <Content Include="common\footer.html" />
+    <Content Include="common\nav.html" />
+    <Content Include="css\BannerStyleSheet.css" />
+    <Content Include="css\FooterStyleSheet.css" />
+    <Content Include="css\NavStyleSheet.css" />
+    <Content Include="css\PrimaryStyleSheet.css" />
+    <Content Include="css\ReducedStyleSheet.css" />
     <Content Include="Index.aspx" />
+    <Content Include="media\img\Banner.png" />
+    <Content Include="media\img\Logo.png" />
+    <Content Include="media\img\TabIcon.png" />
+    <Content Include="media\img\TabIconV2.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -90,9 +103,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
     <Folder Include="media\font\" />
-    <Folder Include="media\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Index.aspx.resx">
+      <DependentUpon>Index.aspx.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
