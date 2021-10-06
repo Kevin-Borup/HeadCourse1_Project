@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainSetup.master.cs" Inherits="CampingPlads.MainSetup" %>
+
+<!DOCTYPE html>
+
+<html lang="da" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!-- The HTML encoding used for character conversion. -->
+    <!-- UTF-8 is the recommended character set for HTML5. -->
+    <meta charset="utf-8" />
+    <!-- Bootstrap mobile first. Follow device width & initial zoom level. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Google Icons API -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!-- Personalized Data -->
+    <link rel="icon" href="media/img/TabIconG.png" />    
+    <link rel="StyleSheet" type="text/css" href="css/ReducedStyleSheet.css" />
+    <link rel="StyleSheet" type="text/css" href="css/MasterStyleSheet.css" />
+    <%-- Page Personal Head Input --%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <title>FN Camping MasterPage</title>
+    </asp:ContentPlaceHolder>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <form class="mainForm" id="form1" runat="server">
+
+        <%-- Page Setup --%>
+        <div class="pageCon container shadow-lg">
+
+
+            <!-- Banner -->
+            <a href="Index.aspx"><img class="banner" src="../media/img/BannerG.png" alt="The website banner, with a logo." /></a>
+
+
+            <div>   
+
+            </div>
+            <%-- Navigation Bar --%>
+            <nav id="navbar" class="navbar navbar-expand-md shadow-lg navbar-custom justify-content-center sticky-top">
+                <!-- Home -->
+                <a id="cabin" class="navbar-brand" href="Index.aspx"><span class="myIcons material-icons">cabin</span></a>
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+                    <span class="menu material-icons">menu</span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbarCustom">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Reservation.aspx">Reservation</a>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Vores steder?
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Cabins.aspx">Vores Hytter</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item shadow-lg" href="CampSites.aspx">Vores Pladser</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="TheArea.aspx">Området</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="AboutUs.aspx">Om os</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- Home -->
+                <a id="account" class="navbar-brand" href="Administration.aspx"><span class="myIcons material-icons">manage_accounts</span></a>
+            </nav>
+
+            <%-- Page Personal Main Input --%>
+            <div id="con">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+
+
+        <%-- Footer --%>
+        <footer>
+            <div>
+                <!-- KontaktInfo -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h4>Kontaktinfo</h4>
+                    </li>
+                    <li class="list-group-item">Mail: <a href="mailto:fn-support@fncamping.dk">fn-support@fncamping.dk</a></li>
+                    <li class="list-group-item">(ZBC) Tlf: <a href="tel:55788888">55 78 88 88</a></li>
+                    <li class="list-group-item"><a href="https://goo.gl/maps/ELkiD4jyug4EezxZ6" target="_blank">Jellingvej 65-55,<br />
+                        7182 Bredsten</a></li>
+
+                </ul>
+                <!-- Information -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h4>Information</h4>
+                    </li>
+                    <li class="list-group-item"><a href="https://www.callbruno.com/en/404" target="_blank">Terms and Conditions</a></li>
+                    <li class="list-group-item"><a href="https://www.callbruno.com/en/404" target="_blank">Privacy</a></li>
+                    <li class="list-group-item"><a href="https://www.callbruno.com/en/404" target="_blank">Selling all your Data</a></li>
+
+                </ul>
+                <a href="Index.aspx"><img src="media/img/LogoG.png" alt="Company Logo" /></a>
+
+            </div>
+
+            <p>
+                <br />
+                © 2021 fncamping.org<br />
+                All Rights Reserved
+                <br />
+                <br />
+                This site is protected by reCAPTCHA and the Google Privacy Policy, Terms of Service and YouTube's Terms of Service apply.
+                <br />
+                <br />
+
+            </p>
+        </footer>
+    </form>
+</body>
+<script src="pageManipulator.js"></script>
+</html>
