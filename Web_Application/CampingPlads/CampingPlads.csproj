@@ -78,6 +78,7 @@
     <Content Include="area.aspx" />
     <Content Include="cabins.aspx" />
     <Content Include="campsites.aspx" />
+    <Content Include="css\ContentStyleSheet.css" />
     <Content Include="css\MasterStyleSheet.css" />
     <Content Include="css\ReducedStyleSheet.css" />
     <Content Include="home.aspx" />
