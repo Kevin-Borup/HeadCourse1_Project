@@ -20,14 +20,14 @@
 
     <!-- Google Icons API -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
+    
+    <title>Fårup Natur Camping</title>
     <!-- Personalized Data -->
     <link rel="icon" href="media/img/TabIconG.png" />    
     <link rel="StyleSheet" type="text/css" href="css/ReducedStyleSheet.css" />
     <link rel="StyleSheet" type="text/css" href="css/MasterStyleSheet.css" />
     <%-- Page Personal Head Input --%>
     <asp:ContentPlaceHolder ID="head" runat="server">
-        <title>FN Camping MasterPage</title>
     </asp:ContentPlaceHolder>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -38,7 +38,7 @@
 
 
             <!-- Banner -->
-            <a href="Index.aspx"><img class="banner" src="../media/img/BannerG.png" alt="The website banner, with a logo." /></a>
+            <a href="home.aspx"><img class="banner" src="../media/img/BannerG.png" alt="The website banner, with a logo." /></a>
 
 
             <div>   
@@ -47,8 +47,7 @@
             <%-- Navigation Bar --%>
             <nav id="navbar" class="navbar navbar-expand-md shadow-lg navbar-custom justify-content-center sticky-top">
                 <!-- Home -->
-                <a id="cabin" class="navbar-brand" href="Index.aspx"><span class="myIcons material-icons">cabin</span></a>
-
+                <a id="cabin" class="navbar-brand" href="home.aspx"><span class="myIcons material-icons">cabin</span></a>
                 <!-- Toggler/collapsibe Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
                     <span class="menu material-icons">menu</span>
@@ -58,29 +57,29 @@
                 <div class="collapse navbar-collapse" id="navbarCustom">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="Reservation.aspx">Reservation</a>
+                            <a class="nav-link" href="reservation.aspx">Reservation</a>
                         </li>
                         <!-- Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Vores steder?
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Cabins.aspx">Vores Hytter</a>
+                                <a class="dropdown-item" href="cabins.aspx">Vores Hytter</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item shadow-lg" href="CampSites.aspx">Vores Pladser</a>
+                                <a class="dropdown-item shadow-lg" href="campsites.aspx">Vores Pladser</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="TheArea.aspx">Området</a>
+                            <a class="nav-link" href="area.aspx">Området</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AboutUs.aspx">Om os</a>
+                            <a class="nav-link" href="aboutus.aspx">Om os</a>
                         </li>
                         
                     </ul>
                 </div>
                 <!-- Home -->
-                <a id="account" class="navbar-brand" href="Administration.aspx"><span class="myIcons material-icons">manage_accounts</span></a>
+                <a id="account" class="navbar-brand" href="administration.aspx"><span class="myIcons material-icons">manage_accounts</span></a>
             </nav>
 
             <%-- Page Personal Main Input --%>

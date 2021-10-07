@@ -33,6 +33,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +44,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -69,56 +73,64 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AboutUs.aspx" />
-    <Content Include="Administration.aspx" />
-    <Content Include="Cabins.aspx" />
-    <Content Include="CampSites.aspx" />
+    <Content Include="aboutus.aspx" />
+    <Content Include="administration.aspx" />
+    <Content Include="area.aspx" />
+    <Content Include="cabins.aspx" />
+    <Content Include="campsites.aspx" />
     <Content Include="css\MasterStyleSheet.css" />
     <Content Include="css\ReducedStyleSheet.css" />
-    <Content Include="Index.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="media\img\aboutus\JorgenBirthe.png" />
     <Content Include="media\img\Background.jpg" />
     <Content Include="media\img\BannerG.png" />
     <Content Include="media\img\LogoG.png" />
     <Content Include="media\img\TabIconG.png" />
-    <Content Include="Reservation.aspx" />
-    <Content Include="TheArea.aspx" />
+    <Content Include="reservation.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutUs.aspx.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
+    <Compile Include="aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AboutUs.aspx.designer.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
+    <Compile Include="aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administration.aspx.cs">
-      <DependentUpon>Administration.aspx</DependentUpon>
+    <Compile Include="administration.aspx.cs">
+      <DependentUpon>administration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administration.aspx.designer.cs">
-      <DependentUpon>Administration.aspx</DependentUpon>
+    <Compile Include="administration.aspx.designer.cs">
+      <DependentUpon>administration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cabins.aspx.cs">
-      <DependentUpon>Cabins.aspx</DependentUpon>
+    <Compile Include="area.aspx.cs">
+      <DependentUpon>area.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cabins.aspx.designer.cs">
-      <DependentUpon>Cabins.aspx</DependentUpon>
+    <Compile Include="area.aspx.designer.cs">
+      <DependentUpon>area.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CampSites.aspx.cs">
-      <DependentUpon>CampSites.aspx</DependentUpon>
+    <Compile Include="cabins.aspx.cs">
+      <DependentUpon>cabins.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CampSites.aspx.designer.cs">
-      <DependentUpon>CampSites.aspx</DependentUpon>
+    <Compile Include="cabins.aspx.designer.cs">
+      <DependentUpon>cabins.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="campsites.aspx.cs">
+      <DependentUpon>campsites.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="campsites.aspx.designer.cs">
+      <DependentUpon>campsites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="MainSetup.Master.cs">
       <DependentUpon>MainSetup.Master</DependentUpon>
@@ -128,19 +140,12 @@
       <DependentUpon>MainSetup.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reservation.aspx.cs">
-      <DependentUpon>Reservation.aspx</DependentUpon>
+    <Compile Include="reservation.aspx.cs">
+      <DependentUpon>reservation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Reservation.aspx.designer.cs">
-      <DependentUpon>Reservation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TheArea.aspx.cs">
-      <DependentUpon>TheArea.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TheArea.aspx.designer.cs">
-      <DependentUpon>TheArea.aspx</DependentUpon>
+    <Compile Include="reservation.aspx.designer.cs">
+      <DependentUpon>reservation.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="media\font\" />
+    <Folder Include="media\img\administration\" />
+    <Folder Include="media\img\area\" />
+    <Folder Include="media\img\cabins\" />
+    <Folder Include="media\img\campsites\" />
+    <Folder Include="media\img\home\" />
+    <Folder Include="media\img\reservation\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -7,9 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace CampingPlads
 {
-    public partial class AboutUs : System.Web.UI.Page
+    public partial class aboutus : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BulletedList1_Click(object sender, BulletedListEventArgs e)
         {
 
         }

@@ -10,7 +10,7 @@
 
 namespace CampingPlads
 {
-    public partial class Cabins
+    public partial class cabins
     {
     }
 }

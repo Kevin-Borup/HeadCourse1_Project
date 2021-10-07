@@ -1,9 +1,6 @@
-﻿@media (max-width: 992px) {
-    .banner {
-        background-size: contain;
-    }
+﻿
 
-    
+@media (max-width: 992px) {
 
     footer > div > ul {
         margin: 3% auto;
@@ -17,6 +14,7 @@
 }
 
 @media (max-width: 768px) {
+
     #cabin {
         margin-right: 17% !important;
     }

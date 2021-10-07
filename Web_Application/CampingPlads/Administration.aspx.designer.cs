@@ -10,7 +10,7 @@
 
 namespace CampingPlads
 {
-    public partial class Administration
+    public partial class administration
     {
     }
 }
