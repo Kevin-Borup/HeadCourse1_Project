@@ -5,27 +5,63 @@
     text-align: left;
 }
 
-.polarid {
-    width: 20%;
-    display: inline;
+.front > section {
+    clear: left;
 }
 
-.polarid * {
-    width: 20%;
-    display: inline;
+    .front > section > div {
+        display: inline-block;
+        width: 55%;
+    }
+
+    .front > section > img {
+        width: 40%;
+        display: inline-block;
+    }
+
+.season {
+    text-align: center;
 }
 
-.polarid > div > p {
-    width: 100%;
+    .season > div {
+        display: inline-block;
+        width: 24%;
+    }
+
+.area {
+    text-align: center;
 }
 
-.polarid>div>p{
-    width: 100%;
+    .area > div {
+        margin: 1% 0;
+        display: inline-block;
+        width: 33%;
+    }
+
+.abusFig {
+    display: inline-block;
 }
 
-.leftOfImg {
-    float: left;
-}
+    .abusFig > figure {
+        float: left;
+        width: 30.4%;
+        margin-right: 2%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+    }
+    .abusFig > figure > img {
+        width: 100%;
+    }
+
+        .abusFig > figure > figcaption {
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+    .abusFig > p {
+        max-width: 84%;
+    }
 
 
 .arrow {
@@ -34,21 +70,26 @@
 
 .Cal {
     width: 60%;
-    height:40%;
+    height: 40%;
     margin: 0 auto;
 }
-.Cal > h6 {
-    text-align: center;
-}
 
-.Cal > hr {
-    
-    margin: 0 auto 10px auto;
-    border-top: 2px solid grey;
-    width: 80%;
-}
+    .Cal > h6 {
+        text-align: center;
+    }
 
-.Cal > table {
-    width: 100% !important;
-}
+    .Cal > hr {
+        margin: 0 auto 10px auto;
+        border-top: 2px solid grey;
+        width: 80%;
+    }
 
+    .Cal > table {
+        width: 100% !important;
+    }
+
+
+
+.pricetable {
+    float: none;
+}

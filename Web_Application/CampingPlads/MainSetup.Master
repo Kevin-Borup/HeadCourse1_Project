@@ -60,7 +60,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="reservation.aspx">Reserver</a>
                         </li>
-                        <!-- Dropdown -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="seasonticket.aspx">Sæsonplads</a>
+                        </li>
+                        <!-- Vores Steder Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Vores steder
                             </a>
@@ -72,6 +75,17 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="area.aspx">Området</a>
+                        </li>
+                        
+                        <!-- Praktisk Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Praktisk
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="campmap.aspx">Pladskort</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item shadow-lg" href="pricetabel.aspx">Prisskema</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="aboutus.aspx">Om os</a>
