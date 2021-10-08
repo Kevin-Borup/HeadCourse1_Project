@@ -56,6 +56,16 @@
     font-size: 35px;
 }
 
+/* Make dropdown appear on hover*/
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown > .dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
 
 footer {
     margin-top: 15%;

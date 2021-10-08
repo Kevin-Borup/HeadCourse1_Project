@@ -11,7 +11,7 @@ namespace CampingPlads
 {
 
 
-    public partial class aboutus
+    public partial class pricetabel
     {
     }
 }
