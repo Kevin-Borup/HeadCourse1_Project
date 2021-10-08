@@ -82,6 +82,7 @@
     <Content Include="css\MasterStyleSheet.css" />
     <Content Include="css\ReducedStyleSheet.css" />
     <Content Include="home.aspx" />
+    <Content Include="js\PageScroller.js" />
     <Content Include="media\img\aboutus\JorgenBirthe.png" />
     <Content Include="media\img\Background.jpg" />
     <Content Include="media\img\BannerG.png" />

@@ -27,17 +27,6 @@
     <link rel="StyleSheet" type="text/css" href="css/ReducedStyleSheet.css" />
     <link rel="StyleSheet" type="text/css" href="css/MasterStyleSheet.css" />
 
-    <script>
-        $(document).ready(function () {
-            $(".scroll-top").click(function () {
-                $("html, body").animate({
-                    scrollTop: 0
-                }, "slow");
-                return false;
-            })
-        });
-    </script>
-
     <%-- Page Personal Head Input --%>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -50,7 +39,7 @@
 
 
             <!-- Banner -->
-            <a href="home.aspx"><img class="banner" src="../media/img/BannerG.png" alt="The website banner, with a logo." /></a>
+            <a id="banner" href="home.aspx"><img class="banner" src="../media/img/BannerG.png" alt="The website banner, with a logo." /></a>
 
 
             <div>   
@@ -146,5 +135,5 @@
         </footer>
     </form>
 </body>
-<script src="pageManipulator.js"></script>
+<script src="js/PageScroller.js"></script>
 </html>
