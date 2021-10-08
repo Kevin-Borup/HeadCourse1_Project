@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Fårup Natur Camping | Om Os" Language="C#" MasterPageFile="~/MainSetup.Master" AutoEventWireup="true" CodeBehind="aboutus.aspx.cs" Inherits="CampingPlads.aboutus" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
+    
     <link href="css/ContentStyleSheet.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -43,7 +43,7 @@
                 </ItemTemplate>
                 <SelectedItemStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
             </asp:DataList>
-            <asp:SqlDataSource ID="CampingPladsData" runat="server" ConnectionString="<%$ ConnectionStrings:CampingPladsConnectionString %>" SelectCommand="SELECT [Item], [Price] FROM [AddonCost]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="CampingPladsData" runat="server" ConnectionString="<%$ ConnectionStrings:FNCampingDatabase %>" SelectCommand="SELECT [Item], [Price] FROM [AddonCost]"></asp:SqlDataSource>
         </section>
     </main>
 </asp:Content>

@@ -10,7 +10,7 @@
         <section class="Cal">
                 <h6>Start Dato</h6>
                 <hr />
-                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="350px" NextPrevFormat="FullMonth">
+                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" NextPrevFormat="FullMonth">
                     <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
                     <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
                     <OtherMonthDayStyle ForeColor="#999999" />

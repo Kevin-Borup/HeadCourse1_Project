@@ -117,21 +117,16 @@
                     <li class="list-group-item"><a href="https://www.callbruno.com/en/404" target="_blank">Selling all your Data</a></li>
 
                 </ul>
-                <a href="Index.aspx"><img src="media/img/LogoG.png" alt="Company Logo" /></a>
-
-            </div>
-
-            <p>
-                <br />
-                © 2021 fncamping.org<br />
-                All Rights Reserved
-                <br />
+                <figure>
+                    <img src="media/img/BannerGRedux.png" alt="Company Logo" />
+                    <figcaption>© 2021 fncamping.org All Rights Reserved
                 <br />
                 This site is protected by reCAPTCHA and the Google Privacy Policy, Terms of Service and YouTube's Terms of Service apply.
-                <br />
-                <br />
+                </figcaption>
+                </figure>
+                
 
-            </p>
+            </div>
         </footer>
     </form>
 </body>
