@@ -1,5 +1,4 @@
-﻿
-
+﻿/* Tablet */
 @media (max-width: 992px) {
 
     footer > div > ul {
@@ -13,6 +12,7 @@
     }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
 
     #cabin {

@@ -33,17 +33,10 @@
 }
 
 .Cal {
-    width: 48%;
+    width: 60%;
+    height:40%;
+    margin: 0 auto;
 }
-
-.Cal1 {
-    display: inline-block;
-}
-
-.Cal2 {
-    float: right;
-}
-
 .Cal > h6 {
     text-align: center;
 }

@@ -58,11 +58,11 @@
                 <div class="collapse navbar-collapse" id="navbarCustom">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="reservation.aspx">Reservation</a>
+                            <a class="nav-link" href="reservation.aspx">Reserver</a>
                         </li>
                         <!-- Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Vores steder?
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Vores steder
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="cabins.aspx">Vores Hytter</a>
