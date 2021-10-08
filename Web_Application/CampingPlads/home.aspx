@@ -31,7 +31,7 @@ For alle gælder det man skal være ude kl. 11.00.
                 <h3>Kort over campingpladsen</h3>
                 <p>Herunder selve visningen over hele campingpladsen.</p>
             </header>
-            <img src="#" alt="Kort over området" />
+            <img src="media/img/home/Map.png" alt="Kort over området" />
         </section>
 
         <h1>This is a filler</h1>
