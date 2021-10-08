@@ -26,6 +26,18 @@
     <link rel="icon" href="media/img/TabIconG.png" />    
     <link rel="StyleSheet" type="text/css" href="css/ReducedStyleSheet.css" />
     <link rel="StyleSheet" type="text/css" href="css/MasterStyleSheet.css" />
+
+    <script>
+        $(document).ready(function () {
+            $(".scroll-top").click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, "slow");
+                return false;
+            })
+        });
+    </script>
+
     <%-- Page Personal Head Input --%>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -93,6 +105,7 @@
 
         <%-- Footer --%>
         <footer>
+            <button type="button" class="scroll-top">Gå tilbage til toppen</button> 
             <div>
                 <!-- KontaktInfo -->
                 <ul class="list-group list-group-flush">
