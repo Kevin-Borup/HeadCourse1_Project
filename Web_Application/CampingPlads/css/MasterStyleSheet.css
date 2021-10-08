@@ -1,8 +1,4 @@
-﻿body * {
-    border: solid red 1px;
-}
-
-body {
+﻿body {
     box-sizing: content-box;
     margin: 0;
     padding: 0;
@@ -29,7 +25,6 @@ body {
     height: 10%;
     max-height: 180px;
     align-items: center;
-    background-color: white;
 }
 
 .navbar {
@@ -59,14 +54,12 @@ body {
 }
 
 .menu {
-    color: #BCBFB0;
     font-size: 35px;
 }
 
 
 footer {
     margin-top: 15%;
-    background-color: #193000;
 }
 
 footer ul {
@@ -85,6 +78,26 @@ footer img {
 footer p {
     padding-top: 2%;
 }
+
+
+/* COLORING AREA */
+body * {
+    border: solid red 1px;
+}
+
+.banner {
+    background-color: white;
+}
+
+.menu {
+    color: #BCBFB0;
+}
+
+footer {
+    background-color: #193000;
+}
+
+
 /* BOOTSTRAP CUSTOM COLOR SETUP*/
 /* Custom color theme */
 .navbar-custom {
