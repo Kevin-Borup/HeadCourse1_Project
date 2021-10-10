@@ -1,5 +1,4 @@
-﻿<%@ Page Title="Fårup Natur Camping | Reservation" Language="C#" MasterPageFile="~/MainSetup.Master" AutoEventWireup="true" CodeBehind="reservation.aspx.cs" Inherits="CampingPlads.reservation" %>
-
+﻿<%@ Page Title="Fårup Natur Camping | Reservation" Language="C#" MasterPageFile="~/MainSetup.Master" AutoEventWireup="true" CodeBehind="Reservation.aspx.cs" Inherits="CampingPlads.Reservation" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/ContentStyleSheet.css" rel="stylesheet" />
 </asp:Content>

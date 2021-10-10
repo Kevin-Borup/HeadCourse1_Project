@@ -49,6 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -73,79 +74,90 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="aboutus.aspx" />
-    <Content Include="administration.aspx" />
-    <Content Include="area.aspx" />
-    <Content Include="cabins.aspx" />
-    <Content Include="campmap.aspx" />
-    <Content Include="campsites.aspx" />
+    <Content Include="AboutUs.aspx" />
+    <Content Include="Administration.aspx" />
+    <Content Include="Area.aspx" />
+    <Content Include="Cabins.aspx" />
+    <Content Include="CampMap.aspx" />
+    <Content Include="CampSites.aspx" />
     <Content Include="css\ContentStyleSheet.css" />
     <Content Include="css\MasterStyleSheet.css" />
     <Content Include="css\ReducedStyleSheet.css" />
-    <Content Include="home.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="js\PageScroller.js" />
     <Content Include="media\img\aboutus\JorgenBirthe.png" />
+    <Content Include="media\img\area\fnFishing.jpg" />
+    <Content Include="media\img\area\fnGivskud.jpg" />
+    <Content Include="media\img\area\fnLalandia.jpg" />
+    <Content Include="media\img\area\fnLegoland.jpg" />
+    <Content Include="media\img\area\fnNature.jpg" />
+    <Content Include="media\img\area\fnSailing.jpg" />
     <Content Include="media\img\Background.jpg" />
     <Content Include="media\img\BannerG.png" />
-    <Content Include="media\img\home\Map.png" />
-    <Content Include="media\img\home\MapWIndex.png" />
+    <Content Include="media\img\campmap\Map.png" />
+    <Content Include="media\img\campmap\MapWIndex.png" />
+    <Content Include="media\img\campmap\MapWIndexSmall.png" />
+    <Content Include="media\img\home\fnCampingLake.jpg" />
+    <Content Include="media\img\home\fnGreenery.jpg" />
+    <Content Include="media\img\home\fnLegolandFront.jpg" />
+    <Content Include="media\img\home\fnPool.jpg" />
     <Content Include="media\img\LogoG.png" />
     <Content Include="media\img\placeholder.png" />
     <Content Include="media\img\TabIconG.png" />
-    <Content Include="pricetabel.aspx" />
-    <Content Include="reservation.aspx" />
-    <Content Include="seasonticket.aspx" />
+    <Content Include="PriceTable.aspx" />
+    <Content Include="Reservation.aspx" />
+    <Content Include="SeasonTicket.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="aboutus.aspx.cs">
-      <DependentUpon>aboutus.aspx</DependentUpon>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="aboutus.aspx.designer.cs">
-      <DependentUpon>aboutus.aspx</DependentUpon>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="administration.aspx.cs">
-      <DependentUpon>administration.aspx</DependentUpon>
+    <Compile Include="Administration.aspx.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="administration.aspx.designer.cs">
-      <DependentUpon>administration.aspx</DependentUpon>
+    <Compile Include="Administration.aspx.designer.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="area.aspx.cs">
-      <DependentUpon>area.aspx</DependentUpon>
+    <Compile Include="Area.aspx.cs">
+      <DependentUpon>Area.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="area.aspx.designer.cs">
-      <DependentUpon>area.aspx</DependentUpon>
+    <Compile Include="Area.aspx.designer.cs">
+      <DependentUpon>Area.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cabins.aspx.cs">
-      <DependentUpon>cabins.aspx</DependentUpon>
+    <Compile Include="Cabins.aspx.cs">
+      <DependentUpon>Cabins.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cabins.aspx.designer.cs">
-      <DependentUpon>cabins.aspx</DependentUpon>
+    <Compile Include="Cabins.aspx.designer.cs">
+      <DependentUpon>Cabins.aspx</DependentUpon>
     </Compile>
-    <Compile Include="campmap.aspx.cs">
-      <DependentUpon>campmap.aspx</DependentUpon>
+    <Compile Include="CampMap.aspx.cs">
+      <DependentUpon>CampMap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="campmap.aspx.designer.cs">
-      <DependentUpon>campmap.aspx</DependentUpon>
+    <Compile Include="CampMap.aspx.designer.cs">
+      <DependentUpon>CampMap.aspx</DependentUpon>
     </Compile>
-    <Compile Include="campsites.aspx.cs">
-      <DependentUpon>campsites.aspx</DependentUpon>
+    <Compile Include="CampSites.aspx.cs">
+      <DependentUpon>CampSites.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="campsites.aspx.designer.cs">
-      <DependentUpon>campsites.aspx</DependentUpon>
+    <Compile Include="CampSites.aspx.designer.cs">
+      <DependentUpon>CampSites.aspx</DependentUpon>
     </Compile>
-    <Compile Include="home.aspx.cs">
-      <DependentUpon>home.aspx</DependentUpon>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="home.aspx.designer.cs">
-      <DependentUpon>home.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="MainSetup.Master.cs">
       <DependentUpon>MainSetup.Master</DependentUpon>
@@ -154,27 +166,27 @@
     <Compile Include="MainSetup.Master.designer.cs">
       <DependentUpon>MainSetup.Master</DependentUpon>
     </Compile>
-    <Compile Include="pricetabel.aspx.cs">
-      <DependentUpon>pricetabel.aspx</DependentUpon>
+    <Compile Include="PriceTable.aspx.cs">
+      <DependentUpon>PriceTable.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pricetabel.aspx.designer.cs">
-      <DependentUpon>pricetabel.aspx</DependentUpon>
+    <Compile Include="PriceTable.aspx.designer.cs">
+      <DependentUpon>PriceTable.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="reservation.aspx.cs">
-      <DependentUpon>reservation.aspx</DependentUpon>
+    <Compile Include="Reservation.aspx.cs">
+      <DependentUpon>Reservation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="reservation.aspx.designer.cs">
-      <DependentUpon>reservation.aspx</DependentUpon>
+    <Compile Include="Reservation.aspx.designer.cs">
+      <DependentUpon>Reservation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="seasonticket.aspx.cs">
-      <DependentUpon>seasonticket.aspx</DependentUpon>
+    <Compile Include="SeasonTicket.aspx.cs">
+      <DependentUpon>SeasonTicket.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="seasonticket.aspx.designer.cs">
-      <DependentUpon>seasonticket.aspx</DependentUpon>
+    <Compile Include="SeasonTicket.aspx.designer.cs">
+      <DependentUpon>SeasonTicket.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -190,11 +202,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="media\font\" />
-    <Folder Include="media\img\administration\" />
-    <Folder Include="media\img\area\" />
     <Folder Include="media\img\cabins\" />
     <Folder Include="media\img\campsites\" />
+    <Folder Include="media\img\pricetabel\" />
     <Folder Include="media\img\reservation\" />
+    <Folder Include="media\img\seasonticket\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

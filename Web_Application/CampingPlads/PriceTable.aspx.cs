@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace CampingPlads
 {
-    public partial class pricetabel : System.Web.UI.Page
+    public partial class PriceTable : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

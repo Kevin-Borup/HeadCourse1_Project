@@ -11,7 +11,7 @@ namespace CampingPlads
 {
 
 
-    public partial class reservation
+    public partial class Reservation
     {
 
         /// <summary>

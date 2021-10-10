@@ -10,7 +10,7 @@
 
 namespace CampingPlads
 {
-    public partial class campmap
+    public partial class CampMap
     {
     }
 }

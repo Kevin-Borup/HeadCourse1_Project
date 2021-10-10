@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CampingPlads
 {
-    public partial class area : System.Web.UI.Page
+    public partial class Area : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
