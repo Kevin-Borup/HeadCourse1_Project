@@ -10,20 +10,21 @@
                 <h3>Kort over campingpladsen</h3>
                 <p>Herunder selve visningen over hele campingpladsen.</p>
             </header>
-            <%-- Map --%>
+            <%-- Map Object --%>
             <div>
-                <%-- Map Filters --%>
                 <div id="map">
+                    <%-- Map --%>
                     <img id="mapBase" src="media/img/campmap/map.png" alt="Kort over Campingpladsen" />
-                    <%--<div id="mapFilters">
+                    <%-- Map Filters --%>
+                    <div id="mapFilters">
                         <img src="media/img/campmap/mapfilters/allSites.png" alt="Billede af Hytte A - Køkken" />
-                    </div>--%>
+                    </div>
 
                     <%-- Index Side --%>
                     <img id="mapIndexBig" src="media/img/campmap/indexBig.png" alt="Stor signatur" />
-                    <%-- Index Under --%>
-                    <img id="mapIndexSmall" src="media/img/campmap/indexSmall.png" alt="Lille signatur" />
                 </div>
+                <%-- Index Under --%>
+                <img id="mapIndexSmall" src="media/img/campmap/indexSmall.png" alt="Lille signatur" />
             </div>
         </section>
     </main>
