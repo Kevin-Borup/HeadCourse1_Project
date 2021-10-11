@@ -13,5 +13,12 @@ namespace CampingPlads
         {
 
         }
+        protected void MenuTabs_MenuItemClick(object sender, MenuEventArgs e)
+        {
+            Menu menuTabs = sender as Menu;
+            MultiView multiTabs = this.FindControl("multiviewEmployee") as MultiView;
+            multiTabs.ActiveViewIndex = Int32.Parse(menuTabs.SelectedValue);
+
+        }
     }
 }

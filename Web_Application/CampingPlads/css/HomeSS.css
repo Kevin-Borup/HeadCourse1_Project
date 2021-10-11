@@ -1,0 +1,30 @@
+﻿body {
+}
+
+.front > section {
+    margin: 5% 0;
+    clear: left;
+    display: flex;
+    max-height: 100%;
+}
+
+    .front > section > div {
+        display: inline-block;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .front > section > .frontImg {
+        margin: 0 0 auto 0;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        display: inline-block;
+        max-width: 40%;
+    }
+
+    .front > section > .right {
+        margin-left: 2%;
+    }
+
+    .front > section > .left {
+        margin-right: 2%;
+    }

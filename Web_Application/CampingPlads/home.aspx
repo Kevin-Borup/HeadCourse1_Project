@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Fårup Natur Camping | Hjem" Language="C#" MasterPageFile="~/MainSetup.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="CampingPlads.Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css/ContentStyleSheet.css" rel="stylesheet" />
+    <link href="css/HomeSS.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main class="front">
@@ -39,7 +39,7 @@ For alle gælder det man skal være ude kl. 11.00.
                 <h3>Ønsker du endnu mere camping for pengene? Få en sæsonplads</h3>
                 <p>Ønsker du at bruge din campingvogn ofte, uden at skulle bøvle med at stille den op og tage den ned hver gang? Så er en sæsonplads måske det helt rigtige for dig! Vi tilbyder både forårspladser, efterårspladser og helårspladser. </p>
 
-                <a class="linkTextLabel" href="seasonticket.aspx">Se priser for en sæsonplads</a>
+                <a class="linkTextLabel" href="SeasonTicket.aspx">Se priser for en sæsonplads</a>
             </div>
 
             <img class="frontImg right" src="media/img/home/fnPool.jpg" alt="Et billede af en pool hos FN Camping" />
@@ -58,7 +58,7 @@ For alle gælder det man skal være ude kl. 11.00.
                 wowow
                 owow
                 </p>
-                <a class="linkTextLabel" href="pricetabel.aspx">Se priser for ophold</a>
+                <a class="linkTextLabel" href="PriceTable.aspx">Se priser for ophold</a>
             </div>
         </section>
         <%-- Se området --%>

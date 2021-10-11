@@ -1,0 +1,12 @@
+﻿body {
+}
+
+.arrow {
+    vertical-align: middle;
+}
+
+.pricetable {
+    float: none;
+    display: flex;
+    flex-direction: column;
+}
