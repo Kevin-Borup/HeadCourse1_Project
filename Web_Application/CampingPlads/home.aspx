@@ -27,10 +27,9 @@ For alle gælder det man skal være ude kl. 11.00.
                     </li>
                     <li class="list-group-item">Bliv på campingpladsen 3 dage og få pladsgebyret gratis for den næste dag. Er man på pladsen i 3 dage derudover opnås rabatten igen.</li>
                     <li class="list-group-item">1 uges plads inkl. 4 personer, 6 x morgenmad og billetter til badeland hele ugen.
-                <br />
+                    <br />
                         1099,-</li>
                 </ul>
-
             </div>
         </section>
         <%-- Sæsonplads --%>

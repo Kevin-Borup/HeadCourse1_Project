@@ -21,7 +21,8 @@
 
     .front > section > .frontImg {
         margin: 0 0 auto 0;
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) display: inline-block;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        display: inline-block;
         max-width: 40%;
     }
 
