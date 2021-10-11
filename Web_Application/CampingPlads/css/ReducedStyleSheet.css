@@ -1,6 +1,12 @@
-﻿/* Tablet */
-@media (max-width: 992px) {
+﻿/* Small Laptop*/
+@media (max-width: 1024px) {
+    .ribbon {
+        display: none !important;
+    }
+}
 
+/* Tablet */
+@media (max-width: 992px) {
     footer > div > ul {
         margin: 3% auto;
         width: 88%;
@@ -14,13 +20,7 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-
-    #cabin {
-        margin-right: 17% !important;
-    }
-
-    #account {
-        margin-right: 0;
-        margin-left: 17% !important;
+    .campMap {
+        content: url("../media/img/campmap/MapWIndexSmall.png") !important;
     }
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CampingPlads
 {
-    public partial class campmap : System.Web.UI.Page
+    public partial class CampMap : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

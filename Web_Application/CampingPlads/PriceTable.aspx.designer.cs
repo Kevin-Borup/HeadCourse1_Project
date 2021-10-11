@@ -11,79 +11,79 @@ namespace CampingPlads
 {
 
 
-    public partial class SeasonTicket
+    public partial class PriceTable
     {
 
         /// <summary>
-        /// FallLabel control.
+        /// DataList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FallLabel;
+        protected global::System.Web.UI.WebControls.DataList DataList1;
 
         /// <summary>
-        /// FallButton control.
+        /// PersonPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button FallButton;
+        protected global::System.Web.UI.WebControls.SqlDataSource PersonPrice;
 
         /// <summary>
-        /// SummerLabel control.
+        /// DataList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SummerLabel;
+        protected global::System.Web.UI.WebControls.DataList DataList2;
 
         /// <summary>
-        /// SummerButton control.
+        /// OrderingCost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SummerButton;
+        protected global::System.Web.UI.WebControls.SqlDataSource OrderingCost;
 
         /// <summary>
-        /// SpringLabel control.
+        /// DataList3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SpringLabel;
+        protected global::System.Web.UI.WebControls.DataList DataList3;
 
         /// <summary>
-        /// SpringButton control.
+        /// SeasonTicket control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SpringButton;
+        protected global::System.Web.UI.WebControls.SqlDataSource SeasonTicket;
 
         /// <summary>
-        /// WinterLabel control.
+        /// DataList4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label WinterLabel;
+        protected global::System.Web.UI.WebControls.DataList DataList4;
 
         /// <summary>
-        /// WinterButton control.
+        /// AddonCost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button WinterButton;
+        protected global::System.Web.UI.WebControls.SqlDataSource AddonCost;
     }
 }
