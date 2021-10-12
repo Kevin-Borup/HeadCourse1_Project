@@ -13,5 +13,15 @@ namespace CampingPlads
         {
 
         }
+
+        protected void DataList2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
