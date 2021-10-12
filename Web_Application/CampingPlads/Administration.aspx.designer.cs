@@ -15,13 +15,13 @@ namespace CampingPlads
     {
 
         /// <summary>
-        /// DataList1 control.
+        /// GridView5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList1;
+        protected global::System.Web.UI.WebControls.GridView GridView5;
 
         /// <summary>
         /// Admin_ArrivingToday control.
@@ -33,13 +33,13 @@ namespace CampingPlads
         protected global::System.Web.UI.WebControls.SqlDataSource Admin_ArrivingToday;
 
         /// <summary>
-        /// DataList6 control.
+        /// GridView6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList6;
+        protected global::System.Web.UI.WebControls.GridView GridView6;
 
         /// <summary>
         /// Admin_CleanToday control.
@@ -51,13 +51,13 @@ namespace CampingPlads
         protected global::System.Web.UI.WebControls.SqlDataSource Admin_CleanToday;
 
         /// <summary>
-        /// DataList7 control.
+        /// GridView7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList7;
+        protected global::System.Web.UI.WebControls.GridView GridView7;
 
         /// <summary>
         /// Admin_Arrived control.
@@ -69,13 +69,13 @@ namespace CampingPlads
         protected global::System.Web.UI.WebControls.SqlDataSource Admin_Arrived;
 
         /// <summary>
-        /// DataList8 control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList8;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
         /// Admin_Cleaned control.
@@ -87,13 +87,13 @@ namespace CampingPlads
         protected global::System.Web.UI.WebControls.SqlDataSource Admin_Cleaned;
 
         /// <summary>
-        /// DataList5 control.
+        /// GridView2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList5;
+        protected global::System.Web.UI.WebControls.GridView GridView2;
 
         /// <summary>
         /// Admin_Customers control.
@@ -105,13 +105,13 @@ namespace CampingPlads
         protected global::System.Web.UI.WebControls.SqlDataSource Admin_Customers;
 
         /// <summary>
-        /// DataList4 control.
+        /// GridView8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList4;
+        protected global::System.Web.UI.WebControls.GridView GridView8;
 
         /// <summary>
         /// Admin_Reservations control.
@@ -123,13 +123,13 @@ namespace CampingPlads
         protected global::System.Web.UI.WebControls.SqlDataSource Admin_Reservations;
 
         /// <summary>
-        /// DataList2 control.
+        /// GridView3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList2;
+        protected global::System.Web.UI.WebControls.GridView GridView3;
 
         /// <summary>
         /// Admin_Cabins control.
@@ -141,13 +141,13 @@ namespace CampingPlads
         protected global::System.Web.UI.WebControls.SqlDataSource Admin_Cabins;
 
         /// <summary>
-        /// DataList3 control.
+        /// GridView4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList3;
+        protected global::System.Web.UI.WebControls.GridView GridView4;
 
         /// <summary>
         /// Admin_Campsites control.
