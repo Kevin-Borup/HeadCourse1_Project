@@ -16,14 +16,14 @@
                 <h4>Forårsplads</h4>
                 <h6>med prisen: </h6>
                 <p>
-                    <asp:Label ID="FallLabel" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="SpringLabel" runat="server" Text="Label"></asp:Label>
                 </p>
                 <p>
                     Periode:
                     <br />
                     01/04 - 30/06
                 </p>
-                <asp:Button ID="FallButton" runat="server" Text="Bestil Plads" OnClick="FallButton_Click" />
+                <asp:Button ID="SpringButton" runat="server" Text="Bestil Plads" OnClick="FallButton_Click" />
             </div>
             <%-- Sommer --%>
             <div>
@@ -44,14 +44,14 @@
                 <h4>Efterårsplads</h4>
                 <h6>med prisen: </h6>
                 <p>
-                    <asp:Label ID="SpringLabel" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="FallLabel" runat="server" Text="Label"></asp:Label>
                 </p>
                 <p>
                     Periode:
                     <br />
                     15/08 - 31/10
                 </p>
-                <asp:Button ID="SpringButton" runat="server" Text="Bestil Plads" OnClick="SpringButton_Click" />
+                <asp:Button ID="FallButton" runat="server" Text="Bestil Plads" OnClick="SpringButton_Click" />
             </div>
             <%-- Vinter --%>
             <div>

@@ -11,8 +11,24 @@ namespace CampingPlads
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UpdatePrices();
         }
+
+        void UpdatePrices()
+        {
+            string[] prices = cs.FrontChannel.GetSeasonPrices();
+            // To be updates from Database for live coverage and reduced future maintenance.
+            SpringLabel.Text = "error";
+            SummerLabel.Text = "error";
+            FallLabel.Text = "error";
+            WinterLabel.Text = "error";
+
+            SpringLabel.Text = prices[1];
+            SummerLabel.Text = prices[2];
+            FallLabel.Text = prices[0];
+            WinterLabel.Text = prices[3];
+        }
+
         protected void FallButton_Click(object sender, EventArgs e)
         {
 

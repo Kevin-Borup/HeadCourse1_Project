@@ -15,22 +15,22 @@ namespace CampingPlads
     {
 
         /// <summary>
-        /// FallLabel control.
+        /// SpringLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FallLabel;
+        protected global::System.Web.UI.WebControls.Label SpringLabel;
 
         /// <summary>
-        /// FallButton control.
+        /// SpringButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button FallButton;
+        protected global::System.Web.UI.WebControls.Button SpringButton;
 
         /// <summary>
         /// SummerLabel control.
@@ -51,22 +51,22 @@ namespace CampingPlads
         protected global::System.Web.UI.WebControls.Button SummerButton;
 
         /// <summary>
-        /// SpringLabel control.
+        /// FallLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SpringLabel;
+        protected global::System.Web.UI.WebControls.Label FallLabel;
 
         /// <summary>
-        /// SpringButton control.
+        /// FallButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SpringButton;
+        protected global::System.Web.UI.WebControls.Button FallButton;
 
         /// <summary>
         /// WinterLabel control.
