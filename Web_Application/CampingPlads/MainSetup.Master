@@ -22,15 +22,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <%-- Fonts --%>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
 
     <!-- Personalized Data -->
     <title>Fårup Natur Camping</title>
     <link rel="icon" href="media/img/TabIconG.png" />
-    <link rel="StyleSheet" type="text/css" href="css/ReducedStyleSheet.css" />
-    <link rel="StyleSheet" type="text/css" href="css/MasterStyleSheet.css" />
+    <link rel="StyleSheet" type="text/css" href="css/MasterSS.css" />
+    <link href="css/CommonSS.css" rel="stylesheet" />
 
     <%-- Page Personal Head Input --%>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -168,8 +168,8 @@
         <footer>
             <%-- Top Button --%>
             <div>
-                <span class="material-icons">arrow_drop_up</span>
-                <button type="button" class="scroll-top">Til toppen</button>
+                
+                <button type="button" class="scroll-top"><span class="material-icons">arrow_drop_up</span></button>
             </div>
             <div>
                 <!-- KontaktInfo -->
