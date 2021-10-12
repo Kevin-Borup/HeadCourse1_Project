@@ -10,49 +10,130 @@ namespace CampingPlads
 {
     public partial class Reservation : System.Web.UI.Page
     {
+        private string colorHeaderText = "#3D5901";
+        private string colorPastDays = "#CCCCCC";
+        private string colorCurrentDay = "#D9D9D9";
+        private string colorPickedDates = "#3D5901";
+        private string colorPeriodText = "#FFFFFF";
+
+        public DateTime StartDate
+        {
+            get
+            {
+                object date = ViewState["StartDate"];
+                return (date == null) ? default : (DateTime)date; 
+            }
+            set { ViewState["StartDate"] = value; }
+        }
+
+        public DateTime EndDate
+        {
+            get 
+            {
+                object date = ViewState["EndDate"];
+                return (date == null) ? default : (DateTime)date;
+            }
+            set { ViewState["EndDate"] = value; }
+        }
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            StartStyler();
             if (!IsPostBack)
             {
-                ReservationCal.DayRender += ReservationCal_DayRender;
+                ReserveCalEnd.VisibleDate = DateTime.Today.AddMonths(1);
+            }
+            ReserveCalStart.DayRender += ReserveCal_DayRender;
+            ReserveCalEnd.DayRender += ReserveCal_DayRender;
+            ReserveCalStart.VisibleMonthChanged += new MonthChangedEventHandler(this.StartMonthChange);
+            ReserveCalEnd.VisibleMonthChanged += new MonthChangedEventHandler(this.EndMonthChange);
+        }
+
+        private void StartStyler()
+        {
+            ReserveCalStart.TitleStyle.ForeColor = ColorTranslator.FromHtml(colorHeaderText);
+            ReserveCalEnd.TitleStyle.ForeColor = ColorTranslator.FromHtml(colorHeaderText);
+            ReserveCalStart.SelectedDayStyle.BackColor = ColorTranslator.FromHtml(colorPickedDates);
+            ReserveCalEnd.SelectedDayStyle.BackColor = ColorTranslator.FromHtml(colorPickedDates);
+        }
+
+        private void ReserveCal_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if (e.Day.Date < DateTime.Today)
+            {
+                e.Cell.BackColor = ColorTranslator.FromHtml(colorPastDays);
+                e.Cell.Enabled = false;
+            }
+            else if (e.Day.Date == DateTime.Today.Date)
+            {
+                e.Cell.BackColor = ColorTranslator.FromHtml(colorCurrentDay);
+                e.Cell.Enabled = false;
+            }
+
+            if (StartDate != default)
+            {
+                if (e.Day.Date == StartDate.Date)
+                {
+                    e.Cell.Style["background"] = $"linear-gradient(to right, White, {colorPickedDates}, {colorPickedDates}, {colorPickedDates})";
+                    e.Cell.ForeColor = ColorTranslator.FromHtml(colorPeriodText);
+
+                }
+                else if (EndDate != default)
+                {
+                    if (StartDate.Date < e.Day.Date && e.Day.Date < EndDate.Date)
+                    {
+                        
+                        e.Cell.BackColor = ColorTranslator.FromHtml(colorPickedDates);
+                        e.Cell.ForeColor = ColorTranslator.FromHtml(colorPeriodText);
+                    }
+                    else if (e.Day.Date == EndDate.Date)
+                    {
+                        e.Cell.Style["background"] = $"linear-gradient(to left, White, {colorPickedDates}, {colorPickedDates}, {colorPickedDates})";
+                        e.Cell.ForeColor = ColorTranslator.FromHtml(colorPeriodText);
+                    }
+                }
             }
         }
 
-        private void ReservationCal_DayRender(object sender, DayRenderEventArgs e)
+        protected void ReserveCalStart_SelectionChanged(object sender, EventArgs e)
         {
-            if (e.Day.Date <= DateTime.Today.Date)
-            {
-                e.Cell.BackColor = ColorTranslator.FromHtml("#CCCCCC");
-            }
-            else if (e.Day.Date == DateTime.Today.AddDays(1).Date)
-            {
-                e.Cell.BackColor = ColorTranslator.FromHtml("#D9D9D9");
-            }
+            StartDate = ReserveCalStart.SelectedDate;
+        }
 
-            DateTime day1 = DateTime.Today.AddDays(3);
-            DateTime day2 = day1.AddDays(7);
+        protected void ReserveCalEnd_SelectionChanged(object sender, EventArgs e)
+        {
+            EndDate = ReserveCalEnd.SelectedDate;
+        }
 
-
-            if (e.Day.Date == day1.Date)
+        protected void StartMonthChange(Object sender, MonthChangedEventArgs e)
+        {
+            if (e.NewDate.Month > e.PreviousDate.Month || e.NewDate > e.PreviousDate)
             {
-                e.Cell.Style["background"] = "linear-gradient(to right, White, #333399, #333399)";
-                e.Cell.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
-
-            }
-            else if (day1.Date < e.Day.Date && e.Day.Date < day2.Date)
-            {
-                e.Cell.BackColor = ColorTranslator.FromHtml("#333399");
-                e.Cell.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
-            } else if (e.Day.Date == day2.Date) {
-                e.Cell.Style["background"] = "linear-gradient(to left, White, #333399, #333399)";
-                e.Cell.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+                if (e.NewDate.Month >= ReserveCalEnd.VisibleDate.Month && e.NewDate.Year >= ReserveCalEnd.VisibleDate.Year)
+                {
+                    ReserveCalEnd.VisibleDate = ReserveCalStart.VisibleDate.AddMonths(1);
+                }
             }
         }
 
-        protected void ReservationCal_SelectionChanged(object sender, EventArgs e)
+        protected void EndMonthChange (Object sender, MonthChangedEventArgs e)
         {
+            if (e.NewDate.Month < e.PreviousDate.Month || e.NewDate < e.PreviousDate)
+            {
+                if (e.NewDate.Month <= ReserveCalStart.VisibleDate.Month && e.NewDate.Year <= ReserveCalStart.VisibleDate.Year)
+                {
+                    ReserveCalStart.VisibleDate = ReserveCalEnd.VisibleDate.AddMonths(-1);
+                }
+            }
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (StartDate != default && EndDate != default)
+            {
+                // Load the next part here!!!
+            }
         }
     }
 }
