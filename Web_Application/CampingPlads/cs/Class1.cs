@@ -7,5 +7,8 @@ namespace CampingPlads.cs
 {
     public class Class1
     {
+        string user = "";
+
+        string admin = "";
     }
 }

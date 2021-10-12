@@ -77,7 +77,6 @@ body {
 /* Common Navigation bar */
 .navbar {
     padding: 4px 2%;
-
 }
 
 .ribbon {
@@ -140,6 +139,12 @@ footer {
     color: var(--footerText);
     background-color: var(--footerBack)
 }
+
+    footer .scroll-top {
+        background-color: var(--footerBack);
+        color: var(--footerText);
+        border: none;
+    }
 
 
     footer ul {

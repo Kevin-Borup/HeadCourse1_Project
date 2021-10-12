@@ -114,6 +114,7 @@
             <SelectedItemStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
     </asp:DataList>
         <asp:SqlDataSource ID="Admin_GuestsArrived" runat="server" ConnectionString="<%$ ConnectionStrings:FNCampingDatabase %>" SelectCommand="SELECT * FROM [Arrived]"></asp:SqlDataSource>
+        
         <asp:DataList ID="DataList6" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyField="ReserveId" DataSourceID="Admin_Reservations" ForeColor="Black" GridLines="Horizontal">
             <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
             <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
