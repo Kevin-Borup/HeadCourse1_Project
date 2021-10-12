@@ -14,82 +14,41 @@
             </header>
             <%-- Pricetable --%>
             <div class="pricetable">
-                <%-- PersonPrice --%>
-                <asp:DataList ID="DataList1" runat="server" CellPadding="4" DataSourceID="PersonPrice" ForeColor="#333333" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
-                    <AlternatingItemStyle BackColor="White" />
-                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderTemplate>
-                        Kundepriser
-                    </HeaderTemplate>
-                    <ItemStyle BackColor="#E3EAEB" />
-                    <ItemTemplate>
-                        <asp:Label ID="ItemLabel" runat="server" Text='<%# Eval("Item") %>' />
-                        &nbsp;&nbsp;<asp:Label ID="ActiveSeasonLabel" runat="server" Text='<%# Eval("ActiveSeason") %>' />
-                        &nbsp;
-                        <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price", "{0:C}") %>' />
-                        <br />
-<br />
-                    </ItemTemplate>
-                    <SelectedItemStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                </asp:DataList>
-                <asp:SqlDataSource ID="PersonPrice" runat="server" ConnectionString="<%$ ConnectionStrings:FNCampingDatabase %>" SelectCommand="SELECT * FROM [PersonPrice]"></asp:SqlDataSource>
                 <%-- OrderingCost --%>
-                <asp:DataList ID="DataList2" runat="server" CellPadding="4" DataKeyField="Item" DataSourceID="OrderingCost" ForeColor="#333333" OnSelectedIndexChanged="DataList2_SelectedIndexChanged">
-                    <AlternatingItemStyle BackColor="White" />
-                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderTemplate>
-                        Reservationsspriser
-                    </HeaderTemplate>
-                    <ItemStyle BackColor="#E3EAEB" />
-                    <ItemTemplate>
-                        <asp:Label ID="ItemLabel" runat="server" Text='<%# Eval("Item") %>' />
-&nbsp;&nbsp;<asp:Label ID="ActiveSeasonLabel" runat="server" Text='<%# Eval("ActiveSeason") %>' />
-&nbsp;
-                        <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price", "{0:C}") %>' />
-                        <br />
-                        <br />
-                    </ItemTemplate>
-                    <SelectedItemStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                </asp:DataList>
+                <asp:GridView ID="OrderingCostGrid" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="OrderingCost" ForeColor="Black" GridLines="Horizontal">
+                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#242121" />
+                </asp:GridView>
                 <asp:SqlDataSource ID="OrderingCost" runat="server" ConnectionString="<%$ ConnectionStrings:FNCampingDatabase %>" SelectCommand="SELECT * FROM [OrderingCost]"></asp:SqlDataSource>
-                <%-- SeasonTicker --%>
-                <asp:DataList ID="DataList3" runat="server" CellPadding="4" DataKeyField="Item" DataSourceID="SeasonTicket" ForeColor="#333333">
-                    <AlternatingItemStyle BackColor="White" />
-                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderTemplate>
-                        Sæsonpladspriser
-                    </HeaderTemplate>
-                    <ItemStyle BackColor="#E3EAEB" />
-                    <ItemTemplate>
-                        &nbsp;<asp:Label ID="ItemLabel" runat="server" Text='<%# Eval("Item") %>' />
-                        &nbsp;
-                        <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price", "{0:C}") %>' />
-                        <br />
-<br />
-                    </ItemTemplate>
-                    <SelectedItemStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                </asp:DataList>
+                <%-- SeasonTicket --%>
+                <asp:GridView ID="SeasonTicketGrid" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SeasonTicket" ForeColor="Black" GridLines="Horizontal">
+                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#242121" />
+                </asp:GridView>
                 <asp:SqlDataSource ID="SeasonTicket" runat="server" ConnectionString="<%$ ConnectionStrings:FNCampingDatabase %>" SelectCommand="SELECT * FROM [SeasonTicket]"></asp:SqlDataSource>
                 <%-- AddonCost --%>
-                <asp:DataList ID="DataList4" runat="server" CellPadding="4" DataKeyField="Item" DataSourceID="AddonCost" ForeColor="#333333" ShowFooter="False">
-                    <AlternatingItemStyle BackColor="White" />
-                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderTemplate>
-                        Tillægspriser
-                    </HeaderTemplate>
-                    <ItemStyle BackColor="#E3EAEB" />
-                    <ItemTemplate>
-                        <asp:Label ID="ItemLabel" runat="server" Text='<%# Eval("Item") %>' />
-                        &nbsp;<asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price", "{0:C}") %>' />
-                        <br />
-<br />
-                    </ItemTemplate>
-                    <SelectedItemStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                </asp:DataList>
+                <asp:GridView ID="AddonCostGrid" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="AddonCost" ForeColor="Black" GridLines="Horizontal">
+                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#242121" />
+                </asp:GridView>
                 <asp:SqlDataSource ID="AddonCost" runat="server" ConnectionString="<%$ ConnectionStrings:FNCampingDatabase %>" SelectCommand="SELECT * FROM [AddonCost]"></asp:SqlDataSource>
             </div>
         </section>
