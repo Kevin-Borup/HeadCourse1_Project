@@ -4,7 +4,7 @@
     /* Main Elements */
     --mainThemeColorBack: #3D5901;
     --mainThemeColorText: #BCBFB0;
-    --mainBack: #F7F7F7;
+    --mainBack: #F7F7F7F2;
     --bannerBack: #ffffff;
     --buttonText: var(--mainThemeColorText);
     --buttonBack: var(--mainThemeColorBack);

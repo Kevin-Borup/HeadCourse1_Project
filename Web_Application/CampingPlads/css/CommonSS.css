@@ -26,7 +26,6 @@
 main {
     background-color: var(--mainBack);
     padding: 2% 5%;
-    opacity: 95%;
     text-align: left;
 }
 

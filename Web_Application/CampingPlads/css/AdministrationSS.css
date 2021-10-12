@@ -3,6 +3,33 @@
 
 #DataList1, #DataList2,
 #DataList3, #DataList4,
-#DataList5, #DataList6 {
+#DataList5, #DataList6 {    margin-top: 541px;
+}
+
+main section {
+    width:100%;
+    justify-content:center;
+    text-align:center;
+    display:flex;
+    flex-direction:row;
+    margin: 2% 0;
+}
+section h6 {
+    position:sticky;
+    top: 0;
+    background-color: var(--mainBack);
+    padding: 4px 0;
+    border-bottom:1px solid grey;
+}
+section div {
+    display: inline-block;
+    border: 1px solid grey;
+    width: 45%;
+    margin: 0 auto;
+    height: 300px;
     overflow-y: auto;
+}
+
+div table{
+    width:100%;
 }
