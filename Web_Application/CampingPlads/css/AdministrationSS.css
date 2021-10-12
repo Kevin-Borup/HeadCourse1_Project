@@ -20,16 +20,28 @@ section h6 {
     background-color: var(--mainBack);
     padding: 4px 0;
     border-bottom:1px solid grey;
+    margin-bottom: 0;
 }
-section div {
+section > div {
     display: inline-block;
     border: 1px solid grey;
     width: 45%;
     margin: 0 auto;
     height: 300px;
-    overflow-y: auto;
 }
 
-div table{
-    width:100%;
+    section > div > div {
+        width: 100%;
+        height: 270px;
+        overflow-y: scroll;
+        border: 1px solid grey;
+    }
+
+.grid {
+    width: 100%;
+}
+
+.gridHeader {
+    position: sticky;
+    top: 0;
 }

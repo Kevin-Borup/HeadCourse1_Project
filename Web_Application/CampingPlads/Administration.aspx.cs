@@ -11,7 +11,12 @@ namespace CampingPlads
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                // Bind the DataView to the DataSource.
+                //CabinDataList.DataSource = 
+                //CabinDataList.DataBind();
+            }
         }
     }
 }

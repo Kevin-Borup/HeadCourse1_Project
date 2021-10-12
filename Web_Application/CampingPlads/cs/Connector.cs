@@ -30,5 +30,7 @@ namespace CampingPlads.cs
             FNCampingUser.UserID = "CampUser";
             FNCampingUser.Password = "Kode1234!";
         }
+
+        //public ICreateDataSource();
     }
 }
