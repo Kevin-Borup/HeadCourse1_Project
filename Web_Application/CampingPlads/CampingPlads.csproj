@@ -1,5 +1,4 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -48,6 +47,9 @@
     <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
@@ -69,22 +71,26 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="Administration.aspx" />
     <Content Include="Area.aspx" />
     <Content Include="Cabins.aspx" />
     <Content Include="CampMap.aspx" />
     <Content Include="CampSites.aspx" />
-    <Content Include="css\ContentStyleSheet.css" />
-    <Content Include="css\MasterStyleSheet.css" />
-    <Content Include="css\ReducedStyleSheet.css" />
+    <Content Include="css\AboutUsSS.css" />
+    <Content Include="css\AdministrationSS.css" />
+    <Content Include="css\AreaSS.css" />
+    <Content Include="css\SitesSS.css" />
+    <Content Include="css\CampMapSS.css" />
+    <Content Include="css\CommonSS.css" />
+    <Content Include="css\HomeSS.css" />
+    <Content Include="css\MasterSS.css" />
+    <Content Include="css\PriceTableSS.css" />
+    <Content Include="css\ReservationSS.css" />
+    <Content Include="css\SeasonTicketSS.css" />
     <Content Include="Home.aspx" />
     <Content Include="js\PageScroller.js" />
+    <Content Include="js\SlideshowGallery.js" />
     <Content Include="media\img\aboutus\JorgenBirthe.png" />
     <Content Include="media\img\area\fnFishing.jpg" />
     <Content Include="media\img\area\fnGivskud.jpg" />
@@ -94,9 +100,27 @@
     <Content Include="media\img\area\fnSailing.jpg" />
     <Content Include="media\img\Background.jpg" />
     <Content Include="media\img\BannerG.png" />
-    <Content Include="media\img\campmap\Map.png" />
-    <Content Include="media\img\campmap\MapWIndex.png" />
-    <Content Include="media\img\campmap\MapWIndexSmall.png" />
+    <Content Include="media\img\cabins\cabinLuxPic1.jpg" />
+    <Content Include="media\img\cabins\cabinLuxPic2.jpg" />
+    <Content Include="media\img\cabins\cabinStaPic1.jpg" />
+    <Content Include="media\img\cabins\LuxCabinAprint.png" />
+    <Content Include="media\img\cabins\StaCabinBprint.png" />
+    <Content Include="media\img\cabins\gallery\cabinLuxOverview.jpg" />
+    <Content Include="media\img\cabins\gallery\cabinLuxOverview1.jpg" />
+    <Content Include="media\img\cabins\gallery\cabinLuxOverview2.jpg" />
+    <Content Include="media\img\cabins\gallery\cabinOverview.jpg" />
+    <Content Include="media\img\cabins\gallery\cabinPark.jpg" />
+    <Content Include="media\img\cabins\gallery\cabinStaOverview.jpg" />
+    <Content Include="media\img\campmap\indexBig.png" />
+    <Content Include="media\img\campmap\indexSmall.png" />
+    <Content Include="media\img\campmap\map.png" />
+    <Content Include="media\img\campmap\mapfilters\allSites.png" />
+    <Content Include="media\img\campsites\gallery\autocampOverview1.jpg" />
+    <Content Include="media\img\campsites\gallery\autocampOverview3.jpg" />
+    <Content Include="media\img\campsites\gallery\campGrill.jpg" />
+    <Content Include="media\img\campsites\gallery\campLake1.jpg" />
+    <Content Include="media\img\campsites\gallery\tentFamily.jpg" />
+    <Content Include="media\img\campsites\gallery\tentNature.jpg" />
     <Content Include="media\img\home\fnCampingLake.jpg" />
     <Content Include="media\img\home\fnGreenery.jpg" />
     <Content Include="media\img\home\fnLegolandFront.jpg" />
@@ -152,6 +176,7 @@
     <Compile Include="CampSites.aspx.designer.cs">
       <DependentUpon>CampSites.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cs\Class1.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -202,8 +227,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="media\font\" />
-    <Folder Include="media\img\cabins\" />
-    <Folder Include="media\img\campsites\" />
     <Folder Include="media\img\pricetabel\" />
     <Folder Include="media\img\reservation\" />
     <Folder Include="media\img\seasonticket\" />
@@ -233,11 +256,12 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

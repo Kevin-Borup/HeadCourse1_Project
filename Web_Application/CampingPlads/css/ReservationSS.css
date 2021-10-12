@@ -1,0 +1,22 @@
+﻿body {
+}
+
+.Cal {
+    width: 60%;
+    height: 40%;
+    margin: 0 auto;
+}
+
+    .Cal > h6 {
+        text-align: center;
+    }
+
+    .Cal > hr {
+        margin: 0 auto 10px auto;
+        border-top: 2px solid grey;
+        width: 80%;
+    }
+
+    .Cal > table {
+        width: 100% !important;
+    }

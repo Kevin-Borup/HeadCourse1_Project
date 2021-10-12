@@ -1,0 +1,48 @@
+﻿body {
+}
+
+img {
+    border: none;
+}
+
+#map {
+    width: 91.4%;
+    position: relative;
+}
+
+#mapBase {
+    height: 100%;
+    display: inline-block;
+}
+
+#mapFilters {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+#mapIndexBig {
+    height: 100%;
+    float: right;
+}
+
+#mapIndexSmall {
+    display: none;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    #map {
+        width: 100%;
+        display: block;
+    }
+
+    #mapIndexBig {
+        display: none;
+    }
+
+    #mapIndexSmall {
+        display: block;
+        width: 100%;
+    }
+}

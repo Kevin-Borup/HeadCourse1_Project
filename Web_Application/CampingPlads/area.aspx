@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Fårup Natur Camping | Området" Language="C#" MasterPageFile="~/MainSetup.Master" AutoEventWireup="true" CodeBehind="Area.aspx.cs" Inherits="CampingPlads.Area" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css/ContentStyleSheet.css" rel="stylesheet" />
+    <link href="css/AreaSS.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main>

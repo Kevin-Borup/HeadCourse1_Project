@@ -1,0 +1,26 @@
+﻿body {
+}
+
+.abusFig {
+    display: flex;
+}
+
+    .abusFig > figure {
+        width: 80%;
+        margin-right: 2%;
+        background-color: white;
+        margin-bottom: 25px;
+    }
+
+        .abusFig > figure > img {
+            width: 100%;
+        }
+
+        .abusFig > figure > figcaption {
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+    .abusFig > p {
+        max-width: 84%;
+    }
