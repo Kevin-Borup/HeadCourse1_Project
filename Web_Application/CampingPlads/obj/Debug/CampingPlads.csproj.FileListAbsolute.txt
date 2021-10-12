@@ -97,3 +97,7 @@ C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\bin\r
 C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\bin\roslyn\System.Memory.dll
 C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\bin\roslyn\System.Numerics.Vectors.dll
 C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\bin\roslyn\System.IO.FileSystem.dll
+C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\ZBC Data-Kommunikation\HeadCourse1_Project\Web_Application\CampingPlads\bin\roslyn\System.ValueTuple.dll

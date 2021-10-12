@@ -1,4 +1,47 @@
-﻿body {
+﻿/* COLORING AREA */
+/* Thematic colors */
+:root {
+    /* Main Elements */
+    --mainThemeColorBack: #3D5901;
+    --mainThemeColorText: #BCBFB0;
+    --mainBack: #F7F7F7;
+    --bannerBack: #ffffff;
+    --buttonText: var(--mainThemeColorText);
+    --buttonBack: var(--mainThemeColorBack);
+    /* Footer */
+    --footerBack: #577356;
+    --footerText: var(--mainThemeColorText);
+    --footerListBack: #464F40;
+    --footerLink: #9EB087;
+    --footerLinkHover: #BCBFB0;
+    --footerLinkVisited: #7F876F;
+    /* Navigation */
+    --navRibTop: var(--mainThemeColorBack);
+    --navRibEdge: #324A00;
+    --navRibBottom: #365000;
+    --navRibBotGradMid: #344E00;
+    --navRibBotGradDark: #202E00;
+    --navRibTips: var(--navRibBottom);
+    /*Boot Strap Elements*/
+    --navbar: var(--mainThemeColorBack);
+    --navTextBrand: var(--mainThemeColorText);
+    --navLink: var(--navTextBrand);
+    --navLinkActive: var(--navTextBrand);
+    --navItems: var(--navTextBrand);
+    /* Nav Drop Down Menu */
+    --navDropMenu: var(--navbar);
+    --navDropText: var(--navTextBrand);
+    --navDropHoverText: #191919;
+    --navDropHoverBack: var(--navTextBrand);
+}
+/*
+body * {
+    border: solid red 1px;
+}*/
+
+
+
+body {
     box-sizing: content-box;
     margin: 0;
     padding: 0;
@@ -16,7 +59,10 @@
     padding: 0 0;
 }
 
+
+/* Common Banner */
 .banner {
+    background-color: var(--bannerBack);
     box-sizing: border-box;
     margin: 0;
     padding: 2% 0 0 0;
@@ -24,14 +70,39 @@
     height: 10%;
     max-height: 180px;
     align-items: center;
+    border: 2px solid var(--mainThemeColor);
+    border-bottom: none;
 }
 
+/* Common Navigation bar */
 .navbar {
-    padding: 4px 10%;
+    padding: 4px 2%;
+}
+
+.ribbon {
+    z-index: -2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.rib {
+    position: relative;
+    --ribPush: 53.7%;
+    height: 148.24%;
+}
+
+.ribL {
+    right: calc(var(--ribPush) - 0.1%);
+}
+
+.ribR {
+    left: var(--ribPush);
 }
 
 .navbar-brand {
     padding: 0;
+    margin: 0 0;
 }
 
 .myIcons {
@@ -39,21 +110,17 @@
     font-size: 35px;
 }
 
-#cabin {
-    margin-right: 7%;
-}
-
-#account {
-    margin-right: 0;
-    margin-left: 7%;
-}
-
 .navbar-collapse {
     justify-content: center;
 }
 
 .menu {
+    color: var(--navItems);
     font-size: 35px;
+}
+
+.dropdown-menu {
+    margin-top: 0;
 }
 
 /* Make dropdown appear on hover*/
@@ -66,118 +133,111 @@
     pointer-events: none;
 }
 
-
+/* Common Footer */
 footer {
     margin-top: 15%;
+    color: var(--footerText);
+    background-color: var(--footerBack)
 }
-    
-    footer > div{
-        margin-top:2%;
-        justify-content:center;
+
+    footer .scroll-top {
+        background-color: var(--footerBack);
+        color: var(--footerText);
+        border: none;
     }
 
+
     footer ul {
-        margin-left: 2.5%;
-        float: left;
-        height: auto;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-left: 3%;
         width: 30%;
+        float: left;
+    }
+
+    footer .list-group-item {
+        background-color: var(--footerListBack);
     }
 
     footer img {
         max-width: 250px;
-        /*margin: 0 auto;*/
+        margin-left: 0px;
     }
 
-    footer figure{
-
-    }
-
-    footer figure img{
-        padding:1% 1%;
-        background-color:white;
-    }
-
-    footer figcaption{
-        text-align:left;
-    }
-
-
-/* COLORING AREA */
-body * {
-    border: solid red 1px;
-}
-
-.banner {
-    background-color: white;
-}
-
-.menu {
-    color: #BCBFB0;
-}
-
-footer {
-    background-color: #F7F7F7;
-    border-top: 2px solid grey;
-    padding-top: 1%;
-}
-
-    footer > div > * {
-        color: #000000;
-    }
-
-    footer .list-group-item {
-        background-color: #464F40;
+    footer p {
+        padding-top: 2%;
     }
 
     footer ul li a {
-        color: #9EB087;
+        color: var(--footerLink);
         text-decoration: underline;
     }
 
         footer ul li a:hover {
-            color: #BCBFB0 !important;
+            color: var(--footerLinkHover) !important;
             text-decoration: underline;
         }
 
         footer ul li a:visited {
-            color: #7F876F;
+            color: var(--footerLinkVisited);
             text-decoration: underline;
         }
+
+/* Small Laptop */
+@media (max-width: 1024px) {
+    .ribbon {
+        display: none !important;
+    }
+}
+
+/* BootStrap Large Devices */
+@media (max-width: 992px) {
+
+    footer > div > ul {
+        margin: 3% auto;
+        width: 88%;
+        float: none;
+    }
+
+    footer > div > a {
+        max-width: 75%;
+    }
+}
 
 /* BOOTSTRAP CUSTOM COLOR SETUP*/
 /* Custom color theme */
 .navbar-custom {
-    background-color: #3D5901;
+    background-color: var(--navbar);
 }
 
     /* change the brand and text color */
     .navbar-custom .navbar-brand,
     .navbar-custom .navbar-text {
-        color: #BCBFB0;
+        color: var(--navTextBrand);
     }
 
     /* change the link color */
     .navbar-custom .navbar-nav .nav-link {
-        color: #BCBFB0;
+        color: var(--navLink);
     }
 
     /* change the color of active or hovered links */
     .navbar-custom .nav-item.active .nav-link,
     .navbar-custom .nav-item:hover .nav-link {
-        color: #DADECC;
+        color: var(--navLinkActive);
     }
 
     /* for dropdown only - change the color of droodown */
     .navbar-custom .dropdown-menu {
-        background-color: #464F40;
+        background-color: var(--navDropMenu);
     }
 
     .navbar-custom .dropdown-item {
-        color: #BCBFB0;
+        color: var(--navDropText);
     }
 
         .navbar-custom .dropdown-item:hover,
         .navbar-custom .dropdown-item:focus {
-            color: #191919;
-            background-color: #898C74;
+            color: var(--navDropHoverText);
+            background-color: var(--navDropHoverBack);
         }
