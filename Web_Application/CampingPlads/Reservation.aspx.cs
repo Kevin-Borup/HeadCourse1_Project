@@ -23,20 +23,30 @@ namespace CampingPlads
         {
             if (e.Day.Date <= DateTime.Today.Date)
             {
-                e.Cell.BackColor = ColorTranslator.FromHtml(("#CCCCCC"));
+                e.Cell.BackColor = ColorTranslator.FromHtml("#CCCCCC");
             }
             else if (e.Day.Date == DateTime.Today.AddDays(1).Date)
             {
-                e.Cell.BackColor = ColorTranslator.FromHtml(("#D9D9D9"));
+                e.Cell.BackColor = ColorTranslator.FromHtml("#D9D9D9");
             }
 
-            DateTime day1 = DateTime.Today.AddDays(10);
+            DateTime day1 = DateTime.Today.AddDays(3);
             DateTime day2 = day1.AddDays(7);
+
 
             if (e.Day.Date == day1.Date)
             {
                 e.Cell.Style["background"] = "linear-gradient(to right, White, #333399, #333399)";
-                
+                e.Cell.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+
+            }
+            else if (day1.Date < e.Day.Date && e.Day.Date < day2.Date)
+            {
+                e.Cell.BackColor = ColorTranslator.FromHtml("#333399");
+                e.Cell.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            } else if (e.Day.Date == day2.Date) {
+                e.Cell.Style["background"] = "linear-gradient(to left, White, #333399, #333399)";
+                e.Cell.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
             }
         }
 
