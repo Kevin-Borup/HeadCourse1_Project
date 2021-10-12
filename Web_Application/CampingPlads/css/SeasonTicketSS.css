@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.season {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+    .season > div {
+        padding: 3% 2%;
+        margin: 0 auto;
+        width: 20%;
+        border-radius: 5%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+        .season > div > input {
+            margin: 0;
+            padding: 4% 10%;
+            color: var(--buttonText);
+            background-color: var(--buttonBack);
+            border-radius: 5%;
+        }

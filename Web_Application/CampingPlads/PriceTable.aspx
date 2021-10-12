@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Fårup Natur Camping | Prisskema" Language="C#" MasterPageFile="~/MainSetup.Master" AutoEventWireup="true" CodeBehind="PriceTable.aspx.cs" Inherits="CampingPlads.PriceTable" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css/ContentStyleSheet.css" rel="stylesheet" />
+    <link href="css/PriceTableSS.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main>
@@ -9,7 +9,7 @@
             <header>
                 <h4>Prisskema</h4>
                 <p><strong>Højsæson:</strong> 14. juni <span class="arrow material-icons">trending_flat</span> 15. august</p>
-                <p><strong>Lavsæson:</strong> 1. januar 14. juni & 15. august 31. december</p>
+                <p><strong>Lavsæson:</strong> 1. januar <span class="arrow material-icons">trending_flat</span> 14. juni & 15. august <span class="arrow material-icons">trending_flat</span> 31. december</p>
                 <p>Alle priser er i DKK inkle. moms </p>
             </header>
             <%-- Pricetable --%>

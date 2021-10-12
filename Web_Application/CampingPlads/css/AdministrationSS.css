@@ -1,0 +1,8 @@
+﻿body {
+}
+
+#DataList1, #DataList2,
+#DataList3, #DataList4,
+#DataList5, #DataList6 {
+    overflow-y: auto;
+}
