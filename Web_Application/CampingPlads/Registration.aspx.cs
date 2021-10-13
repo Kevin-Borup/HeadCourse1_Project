@@ -11,48 +11,84 @@ namespace CampingPlads
     {
         public string FirstName
         {
-            get { }
+            get
+            {
+                object firstname = Session["FirstName"];
+                return (firstname == null) ? default : (string)firstname;
+            }
             set { Session["FirstName"] = value; }
         }
         public string LastName
         {
-            get { }
-            set { }
+            get
+            {
+                object lastname = Session["LastName"];
+                return (lastname == null) ? default : (string)lastname;
+            }
+            set { Session["LastName"] = value; }
         }
         public string Email
         {
-            get { }
-            set { }
+            get
+            {
+                object email = Session["Email"];
+                return (email == null) ? default : (string)email;
+            }
+            set { Session["Email"] = value; }
         }
         public string PhoneNr
         {
-            get { }
-            set { }
+            get
+            {
+                object phonenr = Session["PhoneNr"];
+                return (phonenr == null) ? default : (string)phonenr;
+            }
+            set { Session["PhoneNr"] = value; }
         }
         public DateTime BirthDate
         {
-            get { }
-            set { }
+            get
+            {
+                object birthdate = Session["BirthDate"];
+                return (birthdate == null) ? default : (DateTime)birthdate;
+            }
+            set { Session["BirthDate"] = value; }
         }
         public string StreetName
         {
-            get { }
-            set { }
+            get
+            {
+                object firstname = Session["FirstName"];
+                return (firstname == null) ? default : (string)firstname;
+            }
+            set { Session["StreetName"] = value; }
         }
         public int BuildingNr
         {
-            get { }
-            set { }
+            get
+            {
+                object firstname = Session["FirstName"];
+                return (firstname == null) ? default : (string)firstname;
+            }
+            set { Session["BuildingNr"] = value; }
         }
         public string City
         {
-            get { }
-            set { }
+            get
+            {
+                object firstname = Session["FirstName"];
+                return (firstname == null) ? default : (string)firstname;
+            }
+            set { Session["City"] = value; }
         }
         public int PostalCode
         {
-            get { }
-            set { }
+            get
+            {
+                object firstname = Session["FirstName"];
+                return (firstname == null) ? default : (string)firstname;
+            }
+            set { Session["PostalCode"] = value; }
         }
 
         protected void Page_Load(object sender, EventArgs e)
