@@ -96,6 +96,14 @@ namespace CampingPlads
 
         }
 
+        protected void Confirm_Click(object sender, EventArgs e)
+        {
 
+            // Add insert customer method
+
+            // Send Email confirmation
+
+            Response.Redirect("Confirmation.aspx");
+        }
     }
 }
