@@ -1,2 +1,25 @@
 ﻿body {
 }
+
+header {
+    text-align: center;
+}
+
+.cabins, .campsites {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2% 0;
+}
+
+    .cabins > div {
+        width: 45%;
+    }
+
+        .cabins > div p {
+            display: inline-block;
+        }
+
+    .campsites > div {
+        width: 30%;
+    }

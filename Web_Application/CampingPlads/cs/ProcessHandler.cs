@@ -10,11 +10,6 @@ namespace CampingPlads.cs
     {
         DataConnector connector = new DataConnector();
 
-        void StartConnection()
-        {
-
-        }
-
         public string[] GetSeasonPrices()
         {
             string[] seasonPrices = new string[4];
@@ -66,10 +61,16 @@ namespace CampingPlads.cs
             return campsitesNumbers;
         }
 
+        public bool InsertCustomerReservation()
+        {
+            return connector.InsertCustomerReserveProc();
+        }
+
         public bool SendEmail()
         {
             return false;
         }
+
 
         //ICollection CreateDataSource()
         //{

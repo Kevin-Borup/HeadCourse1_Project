@@ -67,8 +67,8 @@ namespace CampingPlads
         {
             get
             {
-                object firstname = Session["FirstName"];
-                return (firstname == null) ? default : (string)firstname;
+                object buildingNr = Session["BuildingNr"];
+                return (buildingNr == null) ? default : (int)buildingNr;
             }
             set { Session["BuildingNr"] = value; }
         }
@@ -76,8 +76,8 @@ namespace CampingPlads
         {
             get
             {
-                object firstname = Session["FirstName"];
-                return (firstname == null) ? default : (string)firstname;
+                object city = Session["City"];
+                return (city == null) ? default : (string)city;
             }
             set { Session["City"] = value; }
         }
@@ -85,8 +85,8 @@ namespace CampingPlads
         {
             get
             {
-                object firstname = Session["FirstName"];
-                return (firstname == null) ? default : (string)firstname;
+                object postalcode = Session["PostalCode"];
+                return (postalcode == null) ? default : (int)postalcode;
             }
             set { Session["PostalCode"] = value; }
         }
@@ -95,5 +95,7 @@ namespace CampingPlads
         {
 
         }
+
+
     }
 }
