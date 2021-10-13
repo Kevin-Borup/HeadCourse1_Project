@@ -80,6 +80,7 @@
     <Content Include="css\AboutUsSS.css" />
     <Content Include="css\AdministrationSS.css" />
     <Content Include="css\AreaSS.css" />
+    <Content Include="css\OrderSS.css" />
     <Content Include="css\SitesSS.css" />
     <Content Include="css\CampMapSS.css" />
     <Content Include="css\CommonSS.css" />
@@ -128,6 +129,7 @@
     <Content Include="media\img\LogoG.png" />
     <Content Include="media\img\placeholder.png" />
     <Content Include="media\img\TabIconG.png" />
+    <Content Include="Order.aspx" />
     <Content Include="PriceTable.aspx" />
     <Content Include="Reservation.aspx" />
     <Content Include="SeasonTicket.aspx" />
@@ -192,6 +194,13 @@
     </Compile>
     <Compile Include="MainSetup.Master.designer.cs">
       <DependentUpon>MainSetup.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
     <Compile Include="PriceTable.aspx.cs">
       <DependentUpon>PriceTable.aspx</DependentUpon>
