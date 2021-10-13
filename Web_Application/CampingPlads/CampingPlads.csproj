@@ -182,6 +182,7 @@
     <Compile Include="CampSites.aspx.designer.cs">
       <DependentUpon>CampSites.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cs\Class1.cs" />
     <Compile Include="cs\Connector.cs" />
     <Compile Include="cs\ProcessHandler.cs" />
     <Compile Include="Home.aspx.cs">

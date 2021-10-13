@@ -22,7 +22,7 @@ namespace CampingPlads.cs
             seasonPrices = connector.SeasonPriceReference();
 
             return seasonPrices;
-;
+
         }
 
         public int PersonPrice(string items)
@@ -50,6 +50,25 @@ namespace CampingPlads.cs
         public string FullPrice(int sitePrice, int personPrice, int detailPrice)
         {
             return Convert.ToString( sitePrice + personPrice + detailPrice);
+        }
+
+        public int[] GetAvailableCabins(string type)
+        {
+            int[] cabinNumbers = connector.CabinAvailableReference(type);
+
+            return cabinNumbers;
+        }
+
+        public int[] GetAvailableCampsites(string type)
+        {
+            int[] campsitesNumbers = connector.CampsiteAvailableReference(type);
+
+            return campsitesNumbers;
+        }
+
+        public bool SendEmail()
+        {
+            return false;
         }
 
         //ICollection CreateDataSource()

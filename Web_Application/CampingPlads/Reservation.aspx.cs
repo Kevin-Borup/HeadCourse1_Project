@@ -20,20 +20,20 @@ namespace CampingPlads
         {
             get
             {
-                object date = ViewState["StartDate"];
+                object date = Session["StartDate"];
                 return (date == null) ? default : (DateTime)date;
             }
-            set { ViewState["StartDate"] = value; }
+            set { Session["StartDate"] = value; }
         }
 
         public DateTime EndDate
         {
             get
             {
-                object date = ViewState["EndDate"];
+                object date = Session["EndDate"];
                 return (date == null) ? default : (DateTime)date;
             }
-            set { ViewState["EndDate"] = value; }
+            set { Session["EndDate"] = value; }
         }
 
 
@@ -129,7 +129,7 @@ namespace CampingPlads
         {
             if (StartDate != default && EndDate != default)
             {
-                // Load the next part here!!!
+                Response.Redirect("SiteSelection.aspx");
             }
         }
     }
