@@ -25,6 +25,25 @@ namespace CampingPlads.cs
 ;
         }
 
+        public int[] GetAvailableCabins(string type)
+        {
+            int[] cabinNumbers = connector.CabinAvailableReference(type);
+
+            return cabinNumbers;
+        }
+
+        public int[] GetAvailableCampsites(string type)
+        {
+            int[] campsitesNumbers = connector.CampsiteAvailableReference(type);
+
+            return campsitesNumbers;
+        }
+
+        public bool SendEmail()
+        {
+            return false;
+        }
+
         //ICollection CreateDataSource()
         //{
         //    DataTable myDataTable = new DataTable();

@@ -12,12 +12,12 @@ namespace CampingPlads.cs
         private SqlConnectionStringBuilder FNCampingAdmin = new SqlConnectionStringBuilder();
         private SqlConnectionStringBuilder FNCampingUser = new SqlConnectionStringBuilder();
 
-        public DataConnector ()
+        public DataConnector()
         {
             ConnectionDetailer();
         }
 
-        private void ConnectionDetailer ()
+        private void ConnectionDetailer()
         {
             FNCampingAdmin.DataSource = @"tcp:172.16.59.57\CAMPINGPLADS,49172";
             FNCampingAdmin.InitialCatalog = "CampingPlads";
@@ -73,6 +73,102 @@ namespace CampingPlads.cs
             return seasonPrices;
         }
 
-        //public ICreateDataSource();
+        public int[] CabinAvailableReference(string cabinType)
+        {
+            List<int> availableCabins = new List<int>();
+
+            //SqlConnection sqlCon = EstablishSQLConnection("User");
+            SqlConnection sqlCon = new SqlConnection(VS_testAdmin);
+
+            sqlCon.Open();
+
+            string commandStatement = "SELECT Number FROM ";
+
+            SqlCommand command = new SqlCommand(); 
+
+            if (cabinType == "A")
+            {
+                commandStatement += "CabinASiteAvailable";
+
+                command = new SqlCommand(commandStatement, sqlCon);
+
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    availableCabins.Add(Convert.ToInt32(sqlDataReader.GetValue(0)));
+                }
+                sqlDataReader.Close();
+            }
+            else
+            {
+                commandStatement += "CabinBSiteAvailable";
+
+                command = new SqlCommand(commandStatement, sqlCon);
+
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    availableCabins.Add(Convert.ToInt32(sqlDataReader.GetValue(0)));
+                }
+
+                sqlDataReader.Close();
+            }
+
+            command.Dispose();
+            sqlCon.Close();
+
+            return availableCabins.ToArray();
+
+        }
+
+        public int[] CampsiteAvailableReference(string campsiteType)
+        {
+            List<int> availableCampsites = new List<int>();
+
+            //SqlConnection sqlCon = EstablishSQLConnection("User");
+            SqlConnection sqlCon = new SqlConnection(VS_testAdmin);
+
+            sqlCon.Open();
+
+            string commandStatement = "SELECT Number FROM ";
+
+            SqlCommand command = new SqlCommand();
+
+            if (campsiteType == "CampBig" || campsiteType == "CampSmall")
+            {
+                commandStatement += "AutocamperSiteAvailable";
+
+                command = new SqlCommand(commandStatement, sqlCon);
+
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    availableCampsites.Add(Convert.ToInt32(sqlDataReader.GetValue(0)));
+                }
+                sqlDataReader.Close();
+            }
+            else
+            {
+                commandStatement += "TentSiteAvailable";
+
+                command = new SqlCommand(commandStatement, sqlCon);
+
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    availableCampsites.Add(Convert.ToInt32(sqlDataReader.GetValue(0)));
+                }
+                sqlDataReader.Close();
+            }
+
+            command.Dispose();
+            sqlCon.Close();
+
+            return availableCampsites.ToArray();
+        }
     }
 }
