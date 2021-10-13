@@ -25,6 +25,33 @@ namespace CampingPlads.cs
 ;
         }
 
+        public int PersonPrice(string items)
+        {
+            int fullPrice = 0;
+            int[] personPrices = connector.PersonPriceReference();
+            for (int i = 0; i < personPrices.Length; i++)
+            {
+                fullPrice += items[i] * personPrices[i];
+            }
+            return fullPrice;
+        }
+
+        public int DetailPrice(string items)
+        {
+            int fullPrice = 0;
+            int[] detailPrices = connector.DetailPriceReference();
+            for (int i = 0; i < detailPrices.Length; i++)
+            {
+                fullPrice += items[i+2] * detailPrices[i];
+            }
+            return fullPrice;
+        }
+
+        public string FullPrice(int sitePrice, int personPrice, int detailPrice)
+        {
+            return Convert.ToString( sitePrice + personPrice + detailPrice);
+        }
+
         //ICollection CreateDataSource()
         //{
         //    DataTable myDataTable = new DataTable();
@@ -42,5 +69,6 @@ namespace CampingPlads.cs
         //    DataView dataView = new DataView(myDataTable);
         //    return dataView;
         //}
+
     }
 }

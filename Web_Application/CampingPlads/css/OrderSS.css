@@ -1,2 +1,30 @@
 ﻿body {
 }
+
+div {
+    border: 1px solid green;
+}
+section {
+    border: 1px solid red;
+}
+
+#show {
+text-align:center;
+}
+
+#showcase {
+    width: 100%;
+}
+
+section > div {
+    border:1px;
+    width: 45%;
+    margin:0 auto;
+}
+
+.pageBottom {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    text-align:center;
+}

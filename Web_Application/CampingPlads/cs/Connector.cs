@@ -73,6 +73,50 @@ namespace CampingPlads.cs
             return seasonPrices;
         }
 
+        public int[] PersonPriceReference()
+        {
+            int[] prices = new int[] { };
+
+            SqlConnection sqlCon = new SqlConnection(VS_testAdmin);
+
+            sqlCon.Open();
+
+            string commandStatement = "";
+
+            SqlCommand command = new SqlCommand(commandStatement, sqlCon);
+
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+
+
+            sqlDataReader.Close();
+            command.Dispose();
+            sqlCon.Close();
+
+            return prices;
+        }
+
+        public int[] DetailPriceReference()
+        {
+            int[] prices = new int[] { };
+
+            SqlConnection sqlCon = new SqlConnection(VS_testAdmin);
+
+            sqlCon.Open();
+
+            string commandStatement = "";
+
+            SqlCommand command = new SqlCommand(commandStatement, sqlCon);
+
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+
+
+            sqlDataReader.Close();
+            command.Dispose();
+            sqlCon.Close();
+
+            return prices;
+        }
+
         //public ICreateDataSource();
     }
 }
