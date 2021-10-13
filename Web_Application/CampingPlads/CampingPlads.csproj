@@ -80,6 +80,9 @@
     <Content Include="css\AboutUsSS.css" />
     <Content Include="css\AdministrationSS.css" />
     <Content Include="css\AreaSS.css" />
+    <Content Include="css\OrderSS.css" />
+    <Content Include="css\RegistrationSS.css" />
+    <Content Include="css\SiteSelection.css" />
     <Content Include="css\SitesSS.css" />
     <Content Include="css\CampMapSS.css" />
     <Content Include="css\CommonSS.css" />
@@ -128,9 +131,12 @@
     <Content Include="media\img\LogoG.png" />
     <Content Include="media\img\placeholder.png" />
     <Content Include="media\img\TabIconG.png" />
+    <Content Include="Order.aspx" />
     <Content Include="PriceTable.aspx" />
+    <Content Include="Registration.aspx" />
     <Content Include="Reservation.aspx" />
     <Content Include="SeasonTicket.aspx" />
+    <Content Include="SiteSelection.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -177,7 +183,6 @@
       <DependentUpon>CampSites.aspx</DependentUpon>
     </Compile>
     <Compile Include="cs\Connector.cs" />
-    <Compile Include="cs\FrontChannel.cs" />
     <Compile Include="cs\ProcessHandler.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -193,6 +198,13 @@
     <Compile Include="MainSetup.Master.designer.cs">
       <DependentUpon>MainSetup.Master</DependentUpon>
     </Compile>
+    <Compile Include="Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PriceTable.aspx.cs">
       <DependentUpon>PriceTable.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +213,13 @@
       <DependentUpon>PriceTable.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reservation.aspx.cs">
       <DependentUpon>Reservation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,6 +233,13 @@
     </Compile>
     <Compile Include="SeasonTicket.aspx.designer.cs">
       <DependentUpon>SeasonTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteSelection.aspx.cs">
+      <DependentUpon>SiteSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteSelection.aspx.designer.cs">
+      <DependentUpon>SiteSelection.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -17,11 +17,12 @@ namespace CampingPlads.cs
 
         public string[] GetSeasonPrices()
         {
-            string[] placeHolder = new string[4];
+            string[] seasonPrices = new string[4];
 
+            seasonPrices = connector.SeasonPriceReference();
 
-
-            return placeHolder;
+            return seasonPrices;
+;
         }
 
         //ICollection CreateDataSource()

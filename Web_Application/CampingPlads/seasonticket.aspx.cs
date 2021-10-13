@@ -9,6 +9,7 @@ namespace CampingPlads
 {
     public partial class SeasonTicket : System.Web.UI.Page
     {
+        cs.ProcessHandler processHandler = new cs.ProcessHandler(); 
         protected void Page_Load(object sender, EventArgs e)
         {
             UpdatePrices();
@@ -16,17 +17,12 @@ namespace CampingPlads
 
         void UpdatePrices()
         {
-            string[] prices = cs.FrontChannel.GetSeasonPrices();
-            // To be updates from Database for live coverage and reduced future maintenance.
-            SpringLabel.Text = "error";
-            SummerLabel.Text = "error";
-            FallLabel.Text = "error";
-            WinterLabel.Text = "error";
+            string[] prices = processHandler.GetSeasonPrices();
 
-            SpringLabel.Text = prices[1];
-            SummerLabel.Text = prices[2];
-            FallLabel.Text = prices[0];
-            WinterLabel.Text = prices[3];
+            SpringLabel.Text = $"{prices[1]},- kr";
+            SummerLabel.Text = $"{prices[2]},- kr" ;
+            FallLabel.Text = $"{prices[0]},- kr" ;
+            WinterLabel.Text = $"{prices[3]},- kr" ;
         }
 
         protected void FallButton_Click(object sender, EventArgs e)

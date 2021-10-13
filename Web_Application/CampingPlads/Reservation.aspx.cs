@@ -21,14 +21,14 @@ namespace CampingPlads
             get
             {
                 object date = ViewState["StartDate"];
-                return (date == null) ? default : (DateTime)date; 
+                return (date == null) ? default : (DateTime)date;
             }
             set { ViewState["StartDate"] = value; }
         }
 
         public DateTime EndDate
         {
-            get 
+            get
             {
                 object date = ViewState["EndDate"];
                 return (date == null) ? default : (DateTime)date;
@@ -46,6 +46,7 @@ namespace CampingPlads
             }
             ReserveCalStart.DayRender += ReserveCal_DayRender;
             ReserveCalEnd.DayRender += ReserveCal_DayRender;
+
             ReserveCalStart.VisibleMonthChanged += new MonthChangedEventHandler(this.StartMonthChange);
             ReserveCalEnd.VisibleMonthChanged += new MonthChangedEventHandler(this.EndMonthChange);
         }
@@ -83,7 +84,7 @@ namespace CampingPlads
                 {
                     if (StartDate.Date < e.Day.Date && e.Day.Date < EndDate.Date)
                     {
-                        
+
                         e.Cell.BackColor = ColorTranslator.FromHtml(colorPickedDates);
                         e.Cell.ForeColor = ColorTranslator.FromHtml(colorPeriodText);
                     }
@@ -108,27 +109,23 @@ namespace CampingPlads
 
         protected void StartMonthChange(Object sender, MonthChangedEventArgs e)
         {
-            if (e.NewDate.Month > e.PreviousDate.Month || e.NewDate > e.PreviousDate)
+            if (e.NewDate > e.PreviousDate && e.NewDate > ReserveCalEnd.VisibleDate)
             {
-                if (e.NewDate.Month >= ReserveCalEnd.VisibleDate.Month && e.NewDate.Year >= ReserveCalEnd.VisibleDate.Year)
-                {
-                    ReserveCalEnd.VisibleDate = ReserveCalStart.VisibleDate.AddMonths(1);
-                }
+                ReserveCalEnd.VisibleDate = ReserveCalStart.VisibleDate;
+
             }
         }
 
-        protected void EndMonthChange (Object sender, MonthChangedEventArgs e)
+        protected void EndMonthChange(Object sender, MonthChangedEventArgs e)
         {
-            if (e.NewDate.Month < e.PreviousDate.Month || e.NewDate < e.PreviousDate)
+            if (e.NewDate < e.PreviousDate && e.NewDate < ReserveCalStart.VisibleDate)
             {
-                if (e.NewDate.Month <= ReserveCalStart.VisibleDate.Month && e.NewDate.Year <= ReserveCalStart.VisibleDate.Year)
-                {
-                    ReserveCalStart.VisibleDate = ReserveCalEnd.VisibleDate.AddMonths(-1);
-                }
+                ReserveCalStart.VisibleDate = ReserveCalEnd.VisibleDate;
+
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void SubmitButton_Click(object sender, EventArgs e)
         {
             if (StartDate != default && EndDate != default)
             {

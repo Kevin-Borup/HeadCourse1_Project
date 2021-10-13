@@ -63,7 +63,7 @@
             </div>
             <%-- Cleaned --%>
             <div>
-                <h6>Rengjort</h6>
+                <h6>Rengjøring</h6>
                 <div>
                     <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" CssClass="grid" DataSourceID="Admin_Cleaned" ForeColor="Black" GridLines="Horizontal" ShowHeaderWhenEmpty="True" HeaderStyle-CssClass="gridHeader">
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />

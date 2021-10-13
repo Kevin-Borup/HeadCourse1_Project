@@ -43,6 +43,6 @@
             </div>
         </section>
         <hr />
-        <asp:Button CssClass="linkTextLabel ReButton" ID="Button1" runat="server" Text="Videre" OnClick="Button1_Click" />
+        <asp:Button CssClass="linkTextLabel ReButton" ID="SubmitButton" runat="server" Text="Videre" OnClick="SubmitButton_Click" />
     </main>
 </asp:Content>
