@@ -77,6 +77,8 @@ namespace CampingPlads.cs
         {
             int[] prices = new int[] { };
 
+            SqlConnection sqlCon = new SqlConnection(VS_testAdmin);
+
             string commandStatement = "";
 
             SqlCommand command = new SqlCommand(commandStatement, sqlCon);
@@ -94,6 +96,8 @@ namespace CampingPlads.cs
         public int[] DetailPriceReference()
         {
             int[] prices = new int[] { };
+
+            SqlConnection sqlCon = new SqlConnection(VS_testAdmin);
 
             string commandStatement = "";
 

@@ -8,7 +8,8 @@
         <%-- Showcase site Choice --%>
         <section id="show">
             <div id="showcase">
-                jidfjiefhief
+                <asp:Label ID="SiteTypeLabel" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="SiteNrLabel" runat="server" Text="Label"></asp:Label>
             </div>
         </section>
         <%-- Selection form --%>
@@ -28,15 +29,15 @@
                         <asp:DropDownList ID="ChildList" runat="server"></asp:DropDownList>
                         <label>til 50,- kr pr. person </label>
                     </div>
-                   
+
                 </div>
                 <h6>Ekstra</h6>
-                 <%-- Dogs --%>
-                    <div>
-                        <label for="Dogs">Hunde: </label>
-                        <asp:DropDownList ID="DogList" runat="server"></asp:DropDownList>
-                        <label>til 30,- kr pr. hund </label>
-                    </div>
+                <%-- Dogs --%>
+                <div>
+                    <label for="Dogs">Hunde: </label>
+                    <asp:DropDownList ID="DogList" runat="server"></asp:DropDownList>
+                    <label>til 30,- kr pr. hund </label>
+                </div>
                 <%--Bedlining--%>
                 <div>
                     <label for="BedLining">Sengelinned: </label>
@@ -69,7 +70,7 @@
                 </div>
                 <asp:Button ID="SubmitForm" runat="server" OnClick="SubmitForm_Click" Text="Se pris" />
             </div>
-                <%-- Total price --%>
+            <%-- Total price --%>
             <div>
 
                 <h6>Pris i alt</h6>
@@ -82,7 +83,7 @@
                     <asp:Label ID="FullPrice" runat="server" Text="Label"></asp:Label>
                 </div>
                 <asp:Button ID="ConfirmForm" runat="server" OnClick="ConfirmForm_Click" Text="Bekræft" />
-            </div>                               
+            </div>
         </section>
     </main>
 </asp:Content>

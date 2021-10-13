@@ -24,8 +24,31 @@ namespace CampingPlads
             set { ViewState["UserInputData"] = value; }
         }
 
+        public int SiteNr
+        {
+            get
+            {
+                object nr = Session["SiteNr"];
+                return (nr == null) ? default : (int)nr;
+            }
+            set { Session["SiteNr"] = value; }
+        }
+
+        public string SiteType
+        {
+            get
+            {
+                object nr = Session["SiteType"];
+                return (nr == null) ? default : (string)nr;
+            }
+            set { Session["SiteType"] = value; }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            SiteTypeLabel.Text = SiteType;
+            SiteNrLabel.Text = SiteNr.ToString();
+
             int[] numbers = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             AdultList.DataSource = new int[9] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             ChildList.DataSource = numbers;
