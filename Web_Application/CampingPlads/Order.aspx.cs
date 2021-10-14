@@ -45,6 +45,10 @@ namespace CampingPlads
         {
             SiteTypeLabel.Text = SiteType;
             SiteNrLabel.Text = SiteNr.ToString();
+            BikeAmount.Text = "0";
+            AWAmount.Text = "0";
+            CWAmount.Text = "0";
+
 
             int[] numbers = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             AdultList.DataSource = new int[9] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -66,22 +70,19 @@ namespace CampingPlads
             // Adults
             userString[0] = Convert.ToChar(AdultList.SelectedValue);
             // Children
-            userString[1] = Request["ChildAmount"].ToCharArray()[0];
-
-            // Addons
+            userString[1] = Convert.ToChar(ChildList.SelectedValue);
             // Dogs
-            userString[2] = Request["DogAmount"].ToCharArray()[0];
+            userString[2] = Convert.ToChar(DogList.SelectedValue);
             // Bedding
             if (Cleaning.Checked) { userString[3] = '1'; }
             // Cleaning
             if (Cleaning.Checked) { userString[4] = '1'; }
             // Bikes
-            userString[5] = Request["BikeAmount"].ToCharArray()[0];
             userString[5] = Convert.ToChar(BikeAmount.Text);
             // AdultWater
-            userString[6] = Request["AWAmount"].ToCharArray()[0];
+            userString[6] = Convert.ToChar(AWAmount.Text);
             // ChildWater
-            userString[7] = Request["CWAmount"].ToCharArray()[0];
+            userString[7] = Convert.ToChar(CWAmount.Text);
 
             // Saving Form Data
             UserInputData = userString.ToString();
@@ -100,11 +101,6 @@ namespace CampingPlads
         protected void ConfirmForm_Click(object sender, EventArgs e)
         {
             Response.Redirect("Registration.aspx");
-        }
-
-        protected void BikeAmount_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

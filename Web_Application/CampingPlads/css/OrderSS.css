@@ -4,12 +4,13 @@
 div {
     border: 1px solid green;
 }
+
 section {
     border: 1px solid red;
 }
 
 #show {
-text-align:center;
+    text-align: center;
 }
 
 #showcase {
@@ -17,14 +18,37 @@ text-align:center;
 }
 
 section > div {
-    border:1px;
+    border: 1px;
     width: 45%;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .pageBottom {
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    text-align:center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
 }
+
+.PriceTable {
+    display: flex;
+    flex-direction: row;
+}
+
+    .PriceTable > div {
+        margin: 0 0 0 0;
+        width: 25%;
+    }
+
+    .PriceTable > .left {
+        margin: 0 auto 0 0;
+    }
+
+    .PriceTable > .right {
+        margin: 0 0 0 auto;
+    }
+    
+        .PriceTable > div > label, .PriceTable > div > span {
+            margin: 0 0 0.5rem 0;
+            display: block;
+        }

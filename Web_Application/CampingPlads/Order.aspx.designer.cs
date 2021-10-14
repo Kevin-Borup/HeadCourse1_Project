@@ -87,6 +87,24 @@ namespace CampingPlads
         protected global::System.Web.UI.WebControls.TextBox BikeAmount;
 
         /// <summary>
+        /// AWAmount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AWAmount;
+
+        /// <summary>
+        /// CWAmount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CWAmount;
+
+        /// <summary>
         /// SubmitForm control.
         /// </summary>
         /// <remarks>
