@@ -7,7 +7,15 @@ namespace CampingPlads.cs
 {
     public class UserDataCollection
     {
-        HttpContext current = HttpContext.Current;
+        readonly HttpContext current = HttpContext.Current;
+
+        // Saved Data:
+        // Full Name
+        // Start Date
+        // End Date
+        // SiteNr
+        // SiteType
+        // Order Details in one string - adult, child, dog, bedding, cleaning, bikes, adultWater, childWater
 
         // Customer Data
         public string FullName
@@ -60,6 +68,25 @@ namespace CampingPlads.cs
             set { current.Session["SiteType"] = value; }
         }
 
+        public string SeasonName
+        {
+            get
+            {
+                object seasonName = current.Session["SeasonName"];
+                return (seasonName == null) ? default : (string)seasonName;
+            }
+            set { current.Session["SeasonName"] = value; }
+        }
+
+        public int SeasonPrice
+        {
+            get
+            {
+                object seasonPrice = current.Session["SeasonPrice"];
+                return (seasonPrice == null) ? default : (int)seasonPrice;
+            }
+            set { current.Session["SeasonPrice"] = value; }
+        }
 
         //String Setup
         //   01234567

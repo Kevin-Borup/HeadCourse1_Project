@@ -13,7 +13,7 @@
             </p>
         </header>
         <%-- Cabin Selection --%>
-        <div class="cabins">
+        <div runat="server" id="cabinSection" class="cabins">
             <%-- Cabin A --%>
             <div>
                 <h6>Hytte A</h6>

@@ -9,8 +9,8 @@ namespace CampingPlads
 {
     public partial class Registration : System.Web.UI.Page
     {
-        cs.ProcessHandler processHandler = new cs.ProcessHandler();
-        cs.UserDataCollection userData = new cs.UserDataCollection();
+        readonly cs.ProcessHandler processHandler = new cs.ProcessHandler();
+        readonly cs.UserDataCollection userData = new cs.UserDataCollection();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,15 +21,20 @@ namespace CampingPlads
         {
             userData.FullName = firstName.Text + " " + lastName.Text;
 
-
-            // Add insert customer method
-            //processHandler.InsertCustomerReservation();
+            int[] custNr_reserveId = processHandler.InsertCustomerReservation(
+                    firstName.Text, lastName.Text, email.Text, phoneNr.Text, Convert.ToDateTime(birthDate.Text),
+                    streetName.Text, Convert.ToInt32(buildingNr.Text), city.Text, Convert.ToInt32(postalCode.Text),
+                    userData.StartDate, userData.EndDate, userData.AddonDetails[0], userData.AddonDetails[1], userData.SiteType,
+                    userData.AddonDetails[2], userData.AddonDetails[3] == 1, userData.AddonDetails[4] == 1, userData.AddonDetails[5], userData.AddonDetails[6], userData.AddonDetails[7]);
 
             string emailBody = $@"
 
 
         Hej {userData.FullName},
 
+        Dit kundenummer er {custNr_reserveId[0]}.
+
+        Reservation-id: {custNr_reserveId[1]}.
         Her er din bestillings bekræftigelse til reservationen af {userData.SiteNr} til {userData.SiteType}.
         Vi håber du får en fantastisk oplevelse :)
 

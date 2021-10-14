@@ -10,62 +10,62 @@ namespace CampingPlads.cs
 {
     public class ProcessHandler
     {
-        DataConnector connector = new DataConnector();
+        readonly DataConnector connector = new DataConnector();
 
         public string[] GetSeasonPrices()
         {
-            string[] seasonPrices = new string[4];
-
-            seasonPrices = connector.SeasonPriceReference();
-
-            return seasonPrices;
-
+            return connector.SeasonPriceReference();
         }
 
-        public int PersonPrice(string items)
+        public int GetSeasonSpecificPrice(string seasonName)
         {
-            int fullPrice = 0;
-            int[] personPrices = connector.PersonPriceReference();
-            for (int i = 0; i < personPrices.Length; i++)
-            {
-                fullPrice += items[i] * personPrices[i];
-            }
-            return fullPrice;
+            return connector.SpecificSeasonPriceReference(seasonName);
         }
 
-        public int DetailPrice(string items)
+        public int SitePrice(string siteType, DateTime startDate, DateTime endDate)
         {
-            int fullPrice = 0;
-            int[] detailPrices = connector.DetailPriceReference();
-            for (int i = 0; i < detailPrices.Length; i++)
-            {
-                fullPrice += items[i+2] * detailPrices[i];
-            }
-            return fullPrice;
+            return connector.SitePriceReference(siteType, startDate, endDate);
+        }
+
+        public int PersonPrice(string items, DateTime startDate, DateTime endDate)
+        {
+            int adults = items[0];
+            int children = items[1];
+            return connector.PersonPriceReference(adults, children, startDate, endDate);
+        }
+
+        public int DetailPrice(string addons)
+        {
+            int dogs = addons[0];
+            bool bedding = (addons[1] == 1);
+            bool cleaning = (addons[2] == 1);
+            int bikes = addons[3];
+            int adultWater = addons[4];
+            int childWater = addons[5];
+            return connector.DetailPriceReference(dogs, bedding, cleaning, bikes, adultWater, childWater);
         }
 
         public string FullPrice(int sitePrice, int personPrice, int detailPrice)
         {
-            return Convert.ToString( sitePrice + personPrice + detailPrice);
+            return Convert.ToString(sitePrice + personPrice + detailPrice);
         }
 
-        public int[] GetAvailableCabins(string type)
+        public int[] GetAvailableSites(string siteType, DateTime startDate, DateTime endDate)
         {
-            int[] cabinNumbers = connector.CabinAvailableReference(type);
-
-            return cabinNumbers;
+            return connector.GetAvailableSitesReference(siteType, startDate, endDate);
         }
 
-        public int[] GetAvailableCampsites(string type)
+        public int[] InsertCustomerReservation(
+            string firstName, string lastName, string email, string phoneNr, DateTime birthDate,
+            string streetName, int buildingNr, string city, int postalCode, DateTime startDate, DateTime endDate,
+            int adult, int child, string campType, int dogs, bool bedLining, bool cleaning, int bike, int adultWater, int childWater,
+            int? cabinNumber = null, int? campSiteNumber = null, string seasonName = null)
         {
-            int[] campsitesNumbers = connector.CampsiteAvailableReference(type);
-
-            return campsitesNumbers;
-        }
-
-        public bool InsertCustomerReservation()
-        {
-            return connector.InsertCustomerReserveProc();
+            return connector.InsertFullReserveProc(
+                firstName, lastName, email, phoneNr, birthDate, 
+                streetName, buildingNr, city, postalCode, 
+                startDate, endDate, adult, child, campType, 
+                dogs, bedLining, cleaning, bike, adultWater, childWater);
         }
 
         public bool SendConfirmEmail(string customerMail, string customerFullName, string mailBody)

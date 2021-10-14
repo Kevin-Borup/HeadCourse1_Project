@@ -10,13 +10,13 @@ namespace CampingPlads
 {
     public partial class Reservation : System.Web.UI.Page
     {
-        cs.UserDataCollection userDate = new cs.UserDataCollection();
+        readonly cs.UserDataCollection userDate = new cs.UserDataCollection();
 
-        private string colorHeaderText = "#3D5901";
-        private string colorPastDays = "#CCCCCC";
-        private string colorCurrentDay = "#D9D9D9";
-        private string colorPickedDates = "#3D5901";
-        private string colorPeriodText = "#FFFFFF";
+        private readonly string colorHeaderText = "#3D5901";
+        private readonly string colorPastDays = "#CCCCCC";
+        private readonly string colorCurrentDay = "#D9D9D9";
+        private readonly string colorPickedDates = "#3D5901";
+        private readonly string colorPeriodText = "#FFFFFF";
 
 
         protected void Page_Load(object sender, EventArgs e)

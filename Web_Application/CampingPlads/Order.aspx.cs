@@ -10,8 +10,8 @@ namespace CampingPlads
 {
     public partial class Order : System.Web.UI.Page
     {
-        cs.ProcessHandler processHandler = new cs.ProcessHandler();
-        cs.UserDataCollection userData = new cs.UserDataCollection();
+        readonly cs.ProcessHandler processHandler = new cs.ProcessHandler();
+        readonly cs.UserDataCollection userData = new cs.UserDataCollection();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,7 +31,15 @@ namespace CampingPlads
             ChildList.DataBind();
             DogList.DataBind();
 
-            //SitePrice.Text = SitePrice;
+            if (userData.SeasonName == null)
+            {
+                SitePrice.Text = processHandler.SitePrice(userData.SiteType, userData.StartDate, userData.EndDate).ToString();
+            }
+            else
+            {
+                SitePrice.Text = userData.SeasonPrice.ToString();
+            }
+            
         }
 
         protected void SubmitForm_Click(object sender, EventArgs e)
@@ -59,8 +67,18 @@ namespace CampingPlads
             // Saving Form Data
             userData.AddonDetails = userString.ToString();
             int sitePrice = Convert.ToInt32(SitePrice.Text);
-            int personPrice = processHandler.PersonPrice(userData.AddonDetails);
-            int detailPrice = processHandler.DetailPrice(userData.AddonDetails);
+            int personPrice;
+            if (userData.SeasonName == null)
+            {
+                personPrice = processHandler.PersonPrice(userData.AddonDetails.Substring(0, 2), userData.StartDate, userData.EndDate);
+
+            }
+            else
+            {
+                personPrice = userData.SeasonPrice;
+            }
+
+            int detailPrice = processHandler.DetailPrice(userData.AddonDetails.Substring(2, 6));
 
             PersonPrice.Text = personPrice.ToString();
             DetailPrice.Text =  detailPrice.ToString();
