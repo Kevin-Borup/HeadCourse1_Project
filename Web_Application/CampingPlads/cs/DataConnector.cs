@@ -219,23 +219,23 @@ namespace CampingPlads.cs
 
                 SqlCommand command = new SqlCommand("InsertReservation", sqlCon);
 
- //               @FirstName varchar(50), 
-	//@LastName varchar(50),
-	//@Email varchar(50),
-	//@StreetName varchar(50),
-	//@BuildingNr smallint,
- //   @City varchar(50),
-	//@PostalCode smallint,
- //   @BirthDate datetime,
-	//@PhoneNr varchar(50),
-	//@StartDate datetime,
- //   @EndDate datetime,
-	//@Adult tinyint,
- //   @Child tinyint,
-	//@Dog tinyint,
- //   @CabinNumber tinyint,
-	//@CampSiteNumber smallint,
- //   @AddonPriceName varchar(30)
+                //               @FirstName varchar(50), 
+                //@LastName varchar(50),
+                //@Email varchar(50),
+                //@StreetName varchar(50),
+                //@BuildingNr smallint,
+                //   @City varchar(50),
+                //@PostalCode smallint,
+                //   @BirthDate datetime,
+                //@PhoneNr varchar(50),
+                //@StartDate datetime,
+                //   @EndDate datetime,
+                //@Adult tinyint,
+                //   @Child tinyint,
+                //@Dog tinyint,
+                //   @CabinNumber tinyint,
+                //@CampSiteNumber smallint,
+                //   @AddonPriceName varchar(30)
 
                 //command.Parameters.AddWithValue("@FirstName", txtName.Text);
                 //command.Parameters.AddWithValue("@LastName", txtSurName.Text);

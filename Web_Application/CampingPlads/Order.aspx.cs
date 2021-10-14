@@ -10,10 +10,7 @@ namespace CampingPlads
 {
     public partial class Order : System.Web.UI.Page
     {
-        cs.ProcessHandler processHandler = new cs.ProcessHandler(); 
-        //String Setup
-         //   01234567
-         //   adult, child, dog, bedding, cleaning, bikes, adultWater, childWater
+        cs.ProcessHandler processHandler = new cs.ProcessHandler();
         public string UserInputData
         {
             get
@@ -69,6 +66,7 @@ namespace CampingPlads
         {
             StringBuilder userString = new StringBuilder("10000000");
 
+            // Persons
             // Adults
             userString[0] = Convert.ToChar(AdultList.SelectedValue);
             // Children
