@@ -10,10 +10,7 @@ namespace CampingPlads
 {
     public partial class Order : System.Web.UI.Page
     {
-        cs.ProcessHandler processHandler = new cs.ProcessHandler(); 
-        //String Setup
-         //   01234567
-         //   adult, child, dog, bedding, cleaning, bikes, adultWater, childWater
+        cs.ProcessHandler processHandler = new cs.ProcessHandler();
         public string UserInputData
         {
             get
@@ -65,10 +62,13 @@ namespace CampingPlads
         {
             StringBuilder userString = new StringBuilder("10000000");
 
+            // Persons
             // Adults
-            userString[0] = Request["AdultAmount"].ToCharArray()[0];
+            userString[0] = Convert.ToChar(AdultList.SelectedValue);
             // Children
             userString[1] = Request["ChildAmount"].ToCharArray()[0];
+
+            // Addons
             // Dogs
             userString[2] = Request["DogAmount"].ToCharArray()[0];
             // Bedding
@@ -77,6 +77,7 @@ namespace CampingPlads
             if (Cleaning.Checked) { userString[4] = '1'; }
             // Bikes
             userString[5] = Request["BikeAmount"].ToCharArray()[0];
+            userString[5] = Convert.ToChar(BikeAmount.Text);
             // AdultWater
             userString[6] = Request["AWAmount"].ToCharArray()[0];
             // ChildWater
@@ -99,6 +100,11 @@ namespace CampingPlads
         protected void ConfirmForm_Click(object sender, EventArgs e)
         {
             Response.Redirect("Registration.aspx");
+        }
+
+        protected void BikeAmount_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -53,7 +53,7 @@
                 <%-- BikeRental --%>
                 <div>
                     <label for="BikeRental">Lån af cykler: </label>
-                    <input id="BikeAmount" name="Biket" type="text" placeholder="Antal" />
+                    <asp:TextBox id="BikeAmount" name="Biket" type="number" placeholder="Antal" runat="server"></asp:TextBox>
                     <label>til 200,- kr pr. person </label>
                 </div>
                 <%-- WaterWorldAdult --%>
