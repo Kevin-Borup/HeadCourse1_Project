@@ -1,12 +1,8 @@
 ﻿body {
 }
 
-div {
-    border: 1px solid green;
-}
-
-section {
-    border: 1px solid red;
+section > div {
+    border:1px solid black;
 }
 
 #show {
@@ -18,7 +14,6 @@ section {
 }
 
 section > div {
-    border: 1px;
     width: 45%;
     margin: 0 auto;
 }
