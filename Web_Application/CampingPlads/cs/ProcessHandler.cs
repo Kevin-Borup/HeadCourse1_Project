@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
+using System.Net;
+using System.Net.Mail;
 
 namespace CampingPlads.cs
 {
@@ -66,9 +68,40 @@ namespace CampingPlads.cs
             return connector.InsertCustomerReserveProc();
         }
 
-        public bool SendEmail()
+        public bool SendConfirmEmail(string customerMail, string customerFullName, string mailBody)
         {
-            return false;
+            try
+            {
+                MailAddress fromAddress = new MailAddress("fnaturcamping@gmail.com", "Fårup Natur Camping");
+                MailAddress toAddress = new MailAddress(customerMail, customerFullName);
+                const string fromPassword = "nokbtpejerialjeo";
+                const string subject = "Reservation Bekræftet!";
+                string body = mailBody;
+
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp.gmail.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                };
+                using (var message = new MailMessage(fromAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = body
+                })
+                {
+                    smtp.Send(message);
+                }
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            return true;
         }
 
 

@@ -13,42 +13,45 @@
 
             <%-- FirstName --%>
             <label for="firstName"><span class="material-icons">person</span>Fornavn</label>
-            <input type="text" id="firstName" name="firstName" placeholder="John"/>
+            <asp:TextBox type="text" ID="firstName" name="firstName" minlength="3" placeholder="John" autofocus required runat="server"></asp:TextBox>
 
             <%-- LastName --%>
             <label for="lastName"><span class="material-icons">group</span>Efternavn</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Smith"/>
+            <asp:TextBox type="text" ID="lastName" name="lastName" minlength="3" placeholder="Smith" required runat="server"></asp:TextBox>
 
             <%-- Email --%>
             <label for="email"><span class="material-icons">email</span>Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com"/>
+            <asp:TextBox type="email" ID="email" name="email" placeholder="john@example.com" required runat="server"></asp:TextBox>
+
 
             <%-- PhoneNr --%>
             <label for="phoneNr"><span class="material-icons">phone</span>Tlf. Nr.</label>
-            <input type="text" id="phoneNr" name="phoneNr" placeholder="55788888"/>
+            <asp:TextBox type="tel" ID="phoneNr" name="phoneNr" length="8" placeholder="55788888" required runat="server"></asp:TextBox>
+
 
             <%-- BirthDate --%>
             <label for="birthDate"><span class="material-icons">cake</span>Fødselsdato</label>
-            <input type="text" id="birthDate" name="birthDate" placeholder="john@example.com"/>
+            <asp:TextBox type="date" ID="birthDate" name="birthDate" placeholder="john@example.com" required runat="server"></asp:TextBox>
+
 
             <%-- StreetName --%>
             <label for="streetName"><span class="material-icons">add_road</span>Vej</label>
-            <input type="text" id="streetName" name="streetName" placeholder="Ahorn Alle"/>
+            <asp:TextBox type="text" ID="streetName" name="streetName" minlength="1" placeholder="Ahorn Alle" required runat="server"></asp:TextBox>
 
             <%-- BuildingNr --%>
             <label for="buildingNr"><span class="material-icons">cottage</span>Husnummer</label>
-            <input type="text" id="buildingNr" name="buildingNr" placeholder="6"/>
+            <asp:TextBox type="text" ID="buildingNr" name="buildingNr" minlength="1" placeholder="6" required runat="server"></asp:TextBox>
 
             <div class="cityPost">
                 <div>
                     <%-- City --%>
                     <label for="city"><span class="material-icons">location_city</span>By</label>
-                    <input type="text" id="city" name="city" placeholder="Fårup"/>
+                    <asp:TextBox type="text" ID="city" name="city" minlength="1" placeholder="Fårup" required runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <%-- PostalCode --%>
                     <label for="postalCode"><span class="material-icons">location_on</span>Postnummer</label>
-                    <input type="text" id="postalCode" name="postalCode" placeholder="4100"/>
+                    <asp:TextBox type="text" ID="postalCode" length="4" name="postalCode" placeholder="4100" required runat="server"></asp:TextBox>
                 </div>
             </div>
         </div>

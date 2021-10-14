@@ -219,6 +219,9 @@ namespace CampingPlads.cs
 
                 SqlCommand command = new SqlCommand("InsertReservation", sqlCon);
 
+                // Customer Data
+
+                // 
                 //               @FirstName varchar(50), 
                 //@LastName varchar(50),
                 //@Email varchar(50),
