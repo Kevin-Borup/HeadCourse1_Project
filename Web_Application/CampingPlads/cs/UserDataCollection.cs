@@ -10,15 +10,87 @@ namespace CampingPlads.cs
         HttpContext current = HttpContext.Current;
 
         // Customer Data
-        private static string firstName;
-        private static string lastName;
-        private static string email;
-        private static string phoneNr;
-        private static DateTime birthDate;
-        private static string streetName;
-        private static int buildingNr;
-        private static string city;
-        private static int postalCode;
+        //public string FirstName
+        //{
+        //    get
+        //    {
+        //        object firstname = Session["FirstName"];
+        //        return (firstname == null) ? default : (string)firstname;
+        //    }
+        //    set { Session["FirstName"] = value; }
+        //}
+        //public string LastName
+        //{
+        //    get
+        //    {
+        //        object lastname = Session["LastName"];
+        //        return (lastname == null) ? default : (string)lastname;
+        //    }
+        //    set { Session["LastName"] = value; }
+        //}
+        //public string Email
+        //{
+        //    get
+        //    {
+        //        object email = Session["Email"];
+        //        return (email == null) ? default : (string)email;
+        //    }
+        //    set { Session["Email"] = value; }
+        //}
+        //public string PhoneNr
+        //{
+        //    get
+        //    {
+        //        object phonenr = Session["PhoneNr"];
+        //        return (phonenr == null) ? default : (string)phonenr;
+        //    }
+        //    set { Session["PhoneNr"] = value; }
+        //}
+        //public DateTime BirthDate
+        //{
+        //    get
+        //    {
+        //        object birthdate = Session["BirthDate"];
+        //        return (birthdate == null) ? default : (DateTime)birthdate;
+        //    }
+        //    set { Session["BirthDate"] = value; }
+        //}
+        //public string StreetName
+        //{
+        //    get
+        //    {
+        //        object firstname = Session["FirstName"];
+        //        return (firstname == null) ? default : (string)firstname;
+        //    }
+        //    set { Session["StreetName"] = value; }
+        //}
+        //public int BuildingNr
+        //{
+        //    get
+        //    {
+        //        object buildingNr = Session["BuildingNr"];
+        //        return (buildingNr == null) ? default : (int)buildingNr;
+        //    }
+        //    set { Session["BuildingNr"] = value; }
+        //}
+        //public string City
+        //{
+        //    get
+        //    {
+        //        object city = Session["City"];
+        //        return (city == null) ? default : (string)city;
+        //    }
+        //    set { Session["City"] = value; }
+        //}
+        //public int PostalCode
+        //{
+        //    get
+        //    {
+        //        object postalcode = Session["PostalCode"];
+        //        return (postalcode == null) ? default : (int)postalcode;
+        //    }
+        //    set { Session["PostalCode"] = value; }
+        //}
 
         public DateTime StartDate
         {

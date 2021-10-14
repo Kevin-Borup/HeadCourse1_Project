@@ -10,31 +10,13 @@ namespace CampingPlads
 {
     public partial class Reservation : System.Web.UI.Page
     {
+        cs.UserDataCollection userDate = new cs.UserDataCollection();
+
         private string colorHeaderText = "#3D5901";
         private string colorPastDays = "#CCCCCC";
         private string colorCurrentDay = "#D9D9D9";
         private string colorPickedDates = "#3D5901";
         private string colorPeriodText = "#FFFFFF";
-
-        public DateTime StartDate
-        {
-            get
-            {
-                object date = Session["StartDate"];
-                return (date == null) ? default : (DateTime)date;
-            }
-            set { Session["StartDate"] = value; }
-        }
-
-        public DateTime EndDate
-        {
-            get
-            {
-                object date = Session["EndDate"];
-                return (date == null) ? default : (DateTime)date;
-            }
-            set { Session["EndDate"] = value; }
-        }
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -72,23 +54,23 @@ namespace CampingPlads
                 e.Cell.Enabled = false;
             }
 
-            if (StartDate != default)
+            if (userDate.StartDate != default)
             {
-                if (e.Day.Date == StartDate.Date)
+                if (e.Day.Date == userDate.StartDate.Date)
                 {
                     e.Cell.Style["background"] = $"linear-gradient(to right, White, {colorPickedDates}, {colorPickedDates}, {colorPickedDates})";
                     e.Cell.ForeColor = ColorTranslator.FromHtml(colorPeriodText);
 
                 }
-                else if (EndDate != default)
+                else if (userDate.EndDate != default)
                 {
-                    if (StartDate.Date < e.Day.Date && e.Day.Date < EndDate.Date)
+                    if (userDate.StartDate.Date < e.Day.Date && e.Day.Date < userDate.EndDate.Date)
                     {
 
                         e.Cell.BackColor = ColorTranslator.FromHtml(colorPickedDates);
                         e.Cell.ForeColor = ColorTranslator.FromHtml(colorPeriodText);
                     }
-                    else if (e.Day.Date == EndDate.Date)
+                    else if (e.Day.Date == userDate.EndDate.Date)
                     {
                         e.Cell.Style["background"] = $"linear-gradient(to left, White, {colorPickedDates}, {colorPickedDates}, {colorPickedDates})";
                         e.Cell.ForeColor = ColorTranslator.FromHtml(colorPeriodText);
@@ -99,12 +81,12 @@ namespace CampingPlads
 
         protected void ReserveCalStart_SelectionChanged(object sender, EventArgs e)
         {
-            StartDate = ReserveCalStart.SelectedDate;
+            userDate.StartDate = ReserveCalStart.SelectedDate;
         }
 
         protected void ReserveCalEnd_SelectionChanged(object sender, EventArgs e)
         {
-            EndDate = ReserveCalEnd.SelectedDate;
+            userDate.EndDate = ReserveCalEnd.SelectedDate;
         }
 
         protected void StartMonthChange(Object sender, MonthChangedEventArgs e)
@@ -127,7 +109,7 @@ namespace CampingPlads
 
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-            if (StartDate != default && EndDate != default)
+            if (userDate.StartDate != default && userDate.EndDate != default)
             {
                 Response.Redirect("SiteSelection.aspx");
             }
