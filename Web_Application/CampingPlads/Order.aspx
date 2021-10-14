@@ -53,35 +53,48 @@
                 <%-- BikeRental --%>
                 <div>
                     <label for="BikeRental">Lån af cykler: </label>
-                    <input id="BikeAmount" name="Biket" type="text" placeholder="Antal" />
+                    <asp:TextBox ID="BikeAmount" Type="Number" PlaceHolder="Antal" runat="server"></asp:TextBox>
+
                     <label>til 200,- kr pr. person </label>
                 </div>
                 <%-- WaterWorldAdult --%>
                 <div>
                     <label for="WaterWorldA">Voksenbillet til badeland: </label>
-                    <input id="AWAmount" name="AdultWater" type="text" placeholder="Antal" />
+                    <asp:TextBox ID="AWAmount" Type="Number" PlaceHolder="Antal" runat="server"></asp:TextBox>
+                    <%--<input id="AWAmount" name="AdultWater" type="number" placeholder="Antal" />--%>
                     <label>til 30,- kr pr. billet </label>
                 </div>
                 <%-- WaterWorldChild --%>
                 <div>
-                    <label for="WaterWorldC">Børnebillet til vandland: </label>
-                    <input id="CWAmount" name="ChildWater" type="text" placeholder="Antal" />
+                    <label for="WaterWorldC">Børnebillet til badeland: </label>
+                    <asp:TextBox ID="CWAmount" Type="Number" PlaceHolder="Antal" runat="server"></asp:TextBox>
+                    <%--<input id="CWAmount" name="ChildWater" type="number" placeholder="Antal" />--%>
                     <label>til 30,- kr pr. billet </label>
                 </div>
                 <asp:Button ID="SubmitForm" runat="server" OnClick="SubmitForm_Click" Text="Se pris" />
             </div>
             <%-- Total price --%>
             <div>
-
                 <h6>Pris i alt</h6>
-                <div>
-                    <label>Pris: </label>
-                    <asp:Label ID="SitePrice" runat="server" Text="Label"></asp:Label>
-                    <asp:Label ID="PersonPrice" runat="server" Text="Label"></asp:Label>
-                    <asp:Label ID="DetailPrice" runat="server" Text="Label"></asp:Label>
-                    <hr />
-                    <asp:Label ID="FullPrice" runat="server" Text="Label"></asp:Label>
+                <div class="PriceTable">
+                    <div class="left">
+                        <label>Pladspris: </label>
+                        <label>Personpris: </label>
+                        <label>Tilføjelsespris: </label>
+                        <br />
+                        <label>Total pris: </label>
+                    </div>
+                    <%-- Prices --%>
+                    <div class="right">
+                        <asp:Label ID="SitePrice" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="PersonPrice" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="DetailPrice" runat="server" Text="Label"></asp:Label>
+                        <br />
+                        <asp:Label ID="FullPrice" runat="server" Text="Label"></asp:Label>
+                    </div>
                 </div>
+                <%-- Labels --%>
+
                 <asp:Button ID="ConfirmForm" runat="server" OnClick="ConfirmForm_Click" Text="Bekræft" />
             </div>
         </section>
