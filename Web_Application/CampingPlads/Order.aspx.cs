@@ -11,40 +11,12 @@ namespace CampingPlads
     public partial class Order : System.Web.UI.Page
     {
         cs.ProcessHandler processHandler = new cs.ProcessHandler();
-        public string UserInputData
-        {
-            get
-            {
-                object amount = ViewState["UserInputData"];
-                return (amount == null) ? default : (string)amount;
-            }
-            set { ViewState["UserInputData"] = value; }
-        }
-
-        public int SiteNr
-        {
-            get
-            {
-                object nr = Session["SiteNr"];
-                return (nr == null) ? default : (int)nr;
-            }
-            set { Session["SiteNr"] = value; }
-        }
-
-        public string SiteType
-        {
-            get
-            {
-                object nr = Session["SiteType"];
-                return (nr == null) ? default : (string)nr;
-            }
-            set { Session["SiteType"] = value; }
-        }
+        cs.UserDataCollection userData = new cs.UserDataCollection();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            SiteTypeLabel.Text = SiteType;
-            SiteNrLabel.Text = SiteNr.ToString();
+            SiteTypeLabel.Text = userData.SiteType;
+            SiteNrLabel.Text = userData.SiteNr.ToString();
             BikeAmount.Text = "0";
             AWAmount.Text = "0";
             CWAmount.Text = "0";
@@ -85,10 +57,10 @@ namespace CampingPlads
             userString[7] = Convert.ToChar(CWAmount.Text);
 
             // Saving Form Data
-            UserInputData = userString.ToString();
+            userData.AddonDetails = userString.ToString();
             int sitePrice = Convert.ToInt32(SitePrice.Text);
-            int personPrice = processHandler.PersonPrice(UserInputData);
-            int detailPrice = processHandler.DetailPrice(UserInputData);
+            int personPrice = processHandler.PersonPrice(userData.AddonDetails);
+            int detailPrice = processHandler.DetailPrice(userData.AddonDetails);
 
             PersonPrice.Text = personPrice.ToString();
             DetailPrice.Text =  detailPrice.ToString();
