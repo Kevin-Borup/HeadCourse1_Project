@@ -1,0 +1,40 @@
+﻿body {
+}
+
+.Cal {
+    width: 90%;
+    height: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+    .Cal > div {
+        text-align: center;
+        margin: 0 20px;
+    }
+
+        .Cal > div > h6 {
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+hr {
+    margin: 15px auto 15px auto;
+    border-top: 2px solid grey;
+    width: 80%;
+}
+
+
+.Cal div, .Cal table {
+    width: 100% !important;
+}
+
+.ReButton {
+    text-align: center;
+
+    margin: 0 30%;
+}

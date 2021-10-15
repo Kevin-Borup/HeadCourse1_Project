@@ -1,0 +1,22 @@
+﻿body {
+}
+
+.arrow {
+    vertical-align: middle;
+}
+
+.pricetable {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+}
+
+    .pricetable div {
+        width: 100%;
+    }
+    .pricetable div table {
+        width: 100%;
+    }

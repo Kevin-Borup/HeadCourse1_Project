@@ -68,19 +68,20 @@ namespace CampingPlads
             userData.AddonDetails = userString.ToString();
             int sitePrice = Convert.ToInt32(SitePrice.Text);
             int personPrice;
+            int detailPrice = processHandler.DetailPrice(userData.AddonDetails.Substring(2, 6));
+            personPrice = processHandler.PersonPrice(userData.AddonDetails.Substring(0, 2), userData.StartDate, userData.EndDate);
+
             if (userData.SeasonName == null)
             {
-                personPrice = processHandler.PersonPrice(userData.AddonDetails.Substring(0, 2), userData.StartDate, userData.EndDate);
-
+                PersonPrice.Text = personPrice.ToString();
             }
             else
             {
-                personPrice = userData.SeasonPrice;
+                PersonPrice.Text = "- Inkluderet -";
             }
 
-            int detailPrice = processHandler.DetailPrice(userData.AddonDetails.Substring(2, 6));
 
-            PersonPrice.Text = personPrice.ToString();
+            
             DetailPrice.Text =  detailPrice.ToString();
             FullPrice.Text = processHandler.FullPrice(sitePrice, personPrice, detailPrice) + ",- kr.";
         }

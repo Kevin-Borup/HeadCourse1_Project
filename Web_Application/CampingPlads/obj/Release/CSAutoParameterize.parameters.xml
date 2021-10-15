@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="FNCampingDatabase-Web.config Connection String" description="FNCampingDatabase Connection String used in web.config by the application to access the database." defaultValue="Data Source=tcp:172.16.59.57\CAMPINGPLADS,49172;Initial Catalog=CampingPlads;Persist Security Info=True;User ID=VSLogin;Password=Kode1234!" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\ZBC\ Data-Kommunikation\\HeadCourse1_Project\\Web_Application\\CampingPlads\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='FNCampingDatabase']/@connectionString" />
+  </parameter>
+</parameters>

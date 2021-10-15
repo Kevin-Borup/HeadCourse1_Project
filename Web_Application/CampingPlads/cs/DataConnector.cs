@@ -76,20 +76,25 @@ namespace CampingPlads.cs
 
         public int SpecificSeasonPriceReference(string seasonName)
         {
-            int seasonPrice;
-
+            int seasonPrice = 0; 
             //SqlConnection sqlCon = EstablishSQLConnection("User");
             SqlConnection sqlCon = new SqlConnection(vs_TestAdmin);
 
             sqlCon.Open();
 
-            string commandStatement = "SELECT Price FROM SeasonTicket WHERE Item = " + seasonName;
+            string commandStatement = $"SELECT * FROM SeasonTicket";
 
             SqlCommand command = new SqlCommand(commandStatement, sqlCon);
 
             SqlDataReader sqlDataReader = command.ExecuteReader();
 
-            seasonPrice = Convert.ToInt32(sqlDataReader.GetValue(0));
+            while (sqlDataReader.Read())
+            {
+                if (Convert.ToString(sqlDataReader.GetValue(0)).Contains(seasonName))
+                {
+                    seasonPrice = Convert.ToInt32(sqlDataReader.GetValue(1));
+                }
+            }
 
             sqlDataReader.Close();
             command.Dispose();
@@ -132,7 +137,6 @@ namespace CampingPlads.cs
             command.Dispose();
             sqlCon.Close();
 
-            //int totalPrice = 500;
             return totalPrice;
         }
 

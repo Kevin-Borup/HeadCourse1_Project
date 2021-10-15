@@ -54,7 +54,7 @@ namespace CampingPlads
         protected void CabinB_Click(object sender, EventArgs e)
         {
             userData.SiteType = "CabinB";
-            userData.SiteNr = Convert.ToInt32(CabinAList.SelectedValue);
+            userData.SiteNr = Convert.ToInt32(CabinBList.SelectedValue);
 
             if (userData.SiteType != null && userData.SiteNr != 0)
             {
@@ -65,7 +65,7 @@ namespace CampingPlads
         protected void CampBig_Click(object sender, EventArgs e)
         {
             userData.SiteType = "CampBig";
-            userData.SiteNr = Convert.ToInt32(CabinAList.SelectedValue);
+            userData.SiteNr = Convert.ToInt32(CampBigList.SelectedValue);
 
             if (userData.SiteType != null && userData.SiteNr != 0)
             {
@@ -76,7 +76,7 @@ namespace CampingPlads
         protected void CampSmall_Click(object sender, EventArgs e)
         {
             userData.SiteType = "CampSmall";
-            userData.SiteNr = Convert.ToInt32(CabinAList.SelectedValue);
+            userData.SiteNr = Convert.ToInt32(CampSmallList.SelectedValue);
 
             if (userData.SiteType != null && userData.SiteNr != 0)
             {
@@ -87,7 +87,7 @@ namespace CampingPlads
         protected void Tent_Click(object sender, EventArgs e)
         {
             userData.SiteType = "Tent";
-            userData.SiteNr = Convert.ToInt32(CabinAList.SelectedValue);
+            userData.SiteNr = Convert.ToInt32(TentList.SelectedValue);
 
             if (userData.SiteType != null && userData.SiteNr != 0)
             {

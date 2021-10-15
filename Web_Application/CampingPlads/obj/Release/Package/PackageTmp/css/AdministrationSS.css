@@ -1,0 +1,47 @@
+﻿body {
+}
+
+#DataList1, #DataList2,
+#DataList3, #DataList4,
+#DataList5, #DataList6 {    margin-top: 541px;
+}
+
+main section {
+    width:100%;
+    justify-content:center;
+    text-align:center;
+    display:flex;
+    flex-direction:row;
+    margin: 2% 0;
+}
+section h6 {
+    position:sticky;
+    top: 0;
+    background-color: var(--mainBack);
+    padding: 4px 0;
+    border-bottom:1px solid grey;
+    margin-bottom: 0;
+}
+section > div {
+    display: inline-block;
+    border: 1px solid grey;
+    width: 45%;
+    margin: 0 auto;
+    height: 300px;
+}
+
+    section > div > div {
+        width: 100%;
+        height: 270px;
+        overflow-y: scroll;
+        border: 1px solid grey;
+    }
+
+.grid {
+    width: 100%;
+}
+
+.gridHeader {
+    position: sticky;
+    top: 0;
+}

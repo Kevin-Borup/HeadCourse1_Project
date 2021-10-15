@@ -1,0 +1,216 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainSetup.master.cs" Inherits="CampingPlads.MainSetup" %>
+
+<!DOCTYPE html>
+
+<html lang="da" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!-- The HTML encoding used for character conversion. -->
+    <!-- UTF-8 is the recommended character set for HTML5. -->
+    <meta charset="utf-8" />
+    <!-- Bootstrap mobile first. Follow device width & initial zoom level. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Google Icons API -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <%-- Fonts --%>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+
+    <!-- Personalized Data -->
+    <title>Fårup Natur Camping</title>
+    <link rel="icon" href="media/img/TabIconG.png" />
+    <link rel="StyleSheet" type="text/css" href="css/MasterSS.css" />
+    <link href="css/CommonSS.css" rel="stylesheet" />
+
+    <%-- Page Personal Head Input --%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <form class="mainForm" id="form1" runat="server">
+
+        <%-- Page Setup --%>
+        <div class="pageCon container shadow-lg">
+
+
+            <!-- Banner -->
+            <a id="banner" href="Home.aspx">
+                <img class="banner" src="../media/img/BannerG.png" alt="The website banner, with a logo." /></a>
+
+            <%-- Navigation Bar --%>
+            <nav id="navbar" class="navbar navbar-expand-md shadow-lg navbar-custom justify-content-center sticky-top">
+                <div class="ribbon">
+                    <svg class="rib ribL" id="ribL" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.012" height="125.424" viewBox="0 0 148.012 125.424">
+                        <defs>
+                            <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+                                <stop offset="0" stop-color="var(--navRibBottom)" />
+                                <stop offset="0.243" stop-color="var(--navRibBotGradMid)" />
+                                <stop offset="1" stop-color="var(--navRibBotGradDark)" />
+                            </linearGradient>
+                            <filter id="edgeLshadow" x="120.734" y="84.623" width="27.239" height="30.812" filterUnits="userSpaceOnUse">
+                                <feOffset dy="3" input="SourceAlpha" />
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feFlood flood-opacity="0.161" result="color" />
+                                <feComposite operator="out" in="SourceGraphic" in2="blur" />
+                                <feComposite operator="in" in="color" />
+                                <feComposite operator="in" in2="SourceGraphic" />
+                            </filter>
+                        </defs>
+                        <path id="bTipL" d="M0,0,42.312,52.261H0Z" transform="translate(0 125.424) rotate(-90)" fill="var(--navRibBottom)" />
+                        <path id="tTipL" d="M0,52.261,42.312,0H0Z" transform="translate(52.261 40.8) rotate(90)" fill="var(--navRibBottom)" />
+                        <rect id="baseL" width="96.712" height="84.623" transform="translate(51.261 40.8)" fill="url(#linear-gradient)" />
+                        <path id="edgeL" d="M276.189,384.623l27.239,30.812V384.623Z" transform="translate(-155.416 -300)" fill="var(--navRibEdge)" />
+                        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#edgeLshadow)" style="mix-blend-mode: soft-light; isolation: isolate">
+                            <path id="edgeLshadow-2" data-name="edgeLshadow" d="M276.189,384.623l27.239,30.812V384.623Z" transform="translate(-155.45 -300)" fill="#fff" />
+                        </g>
+                        <path id="TbaseL" d="M0,0H27.2V84.623H0Z" transform="translate(120.773)" fill="var(--navRibTop)" />
+                    </svg>
+                </div>
+                <div class="ribbon">
+                    <svg class="rib ribR" id="ribR" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.012" height="125.424" viewBox="0 0 148.012 125.424">
+                        <defs>
+                            <linearGradient id="rev-linear-gradient" x1="1" y1="0.5" x2="0" y2="0.5" gradientUnits="objectBoundingBox">
+                                <stop offset="0" stop-color="var(--navRibBottom)" />
+                                <stop offset="0.243" stop-color="var(--navRibBotGradMid)" />
+                                <stop offset="1" stop-color="var(--navRibBotGradDark)" />
+                            </linearGradient>
+                            <filter id="edgeRshadow" x="0.039" y="84.623" width="27.239" height="30.812" filterUnits="userSpaceOnUse">
+                                <feOffset dy="3" input="SourceAlpha" />
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feFlood flood-opacity="0.161" result="color" />
+                                <feComposite operator="out" in="SourceGraphic" in2="blur" />
+                                <feComposite operator="in" in="color" />
+                                <feComposite operator="in" in2="SourceGraphic" />
+                            </filter>
+                        </defs>
+                        <path id="bTipR" d="M0,52.261,42.312,0H0Z" transform="translate(95.751 125.424) rotate(-90)" fill="var(--navRibBottom)" />
+                        <path id="tTipR" d="M0,0,42.312,52.261H0Z" transform="translate(148.012 40.8) rotate(90)" fill="var(--navRibBottom)" />
+                        <rect id="baseR" width="96.712" height="84.623" transform="translate(0.039 40.8)" fill="url(#rev-linear-gradient)" />
+                        <path id="edgeR" d="M303.428,384.623l-27.239,30.812V384.623Z" transform="translate(-276.189 -300)" fill="var(--navRibEdge)" />
+                        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#edgeRshadow)" style="mix-blend-mode: soft-light; isolation: isolate">
+                            <path id="edgeRshadow-2" data-name="edgeRshadow" d="M303.428,384.623l-27.239,30.812V384.623Z" transform="translate(-276.15 -300)" fill="#fff" />
+                        </g>
+                        <path id="TbaseR" d="M27.2,0H0V84.623H27.2Z" transform="translate(0.039)" fill="var(--navRibTop)" />
+                    </svg>
+
+                </div>
+
+                <!-- Home -->
+                <a id="cabin" class="navbar-brand" href="Home.aspx"><span class="myIcons material-icons">cabin</span></a>
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+                    <span class="menu material-icons">menu</span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbarCustom">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Reservation.aspx">Reserver</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="SeasonTicket.aspx">Sæsonplads</a>
+                        </li>
+                        <!-- Vores Steder Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Vores steder
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="Cabins.aspx">Vores Hytter</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item shadow-lg" href="CampSites.aspx">Vores Pladser</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Area.aspx">Området</a>
+                        </li>
+
+                        <!-- Praktisk Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Praktisk
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="CampMap.aspx">Pladskort</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item shadow-lg" href="PriceTable.aspx">Prisskema</a>
+                            </div>
+                        </li>
+                        <li class="aboutUs nav-item">
+                            <a class="nav-link" href="AboutUs.aspx">Om os</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Administration -->
+                <a id="account" class="navbar-brand" href="Administration.aspx"><span class="myIcons material-icons">manage_accounts</span></a>
+            </nav>
+
+            <%-- Page Personal Main Input --%>
+            <div id="con">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+
+
+        <%-- Footer --%>
+        <footer>
+            <%-- Top Button --%>
+            <div>
+                
+                <button type="button" class="scroll-top"><span class="material-icons">arrow_drop_up</span></button>
+            </div>
+            <div>
+                <!-- KontaktInfo -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h4>Kontaktinfo</h4>
+                    </li>
+                    <li class="list-group-item">Mail: <a href="mailto:fn-support@fncamping.dk">fn-support@fncamping.dk</a></li>
+                    <li class="list-group-item">(ZBC) Tlf: <a href="tel:55788888">55 78 88 88</a></li>
+                    <li class="list-group-item"><a href="https://goo.gl/maps/ELkiD4jyug4EezxZ6" target="_blank">Jellingvej 65-55,<br />
+                        7182 Bredsten</a></li>
+
+                </ul>
+                <!-- Information -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h4>Information</h4>
+                    </li>
+                    <li class="list-group-item"><a href="https://www.callbruno.com/en/404" target="_blank">Terms and Conditions</a></li>
+                    <li class="list-group-item"><a href="https://www.callbruno.com/en/404" target="_blank">Privacy</a></li>
+                    <li class="list-group-item"><a href="https://www.callbruno.com/en/404" target="_blank">Selling all your Data</a></li>
+
+                </ul>
+                <a href="Home.aspx">
+                    <img src="media/img/LogoG.png" alt="Company Logo" /></a>
+
+            </div>
+
+            <p>
+                <br />
+                © 2021 fncamping.org<br />
+                All Rights Reserved
+                <br />
+                <br />
+                This site is protected by reCAPTCHA and the Google Privacy Policy, Terms of Service and YouTube's Terms of Service apply.
+                <br />
+                <br />
+
+            </p>
+        </footer>
+    </form>
+</body>
+<script src="js/PageScroller.js"></script>
+</html>
