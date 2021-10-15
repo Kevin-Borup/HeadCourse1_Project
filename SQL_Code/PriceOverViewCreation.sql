@@ -1,8 +1,8 @@
-CREATE TABLE PriceOverView(
+CREATE TABLE PriceOverview(
 	ReserveId int FOREIGN KEY REFERENCES Reservation(ReserveId),
-	PersonPriceValue smallint,
-	SitePriceValue smallint,
-	AddonPriceValue smallint,
-	TotalPriceValue smallint,
+	PersonPriceValue int,
+	SitePriceValue int,
+	AddonPriceValue int,
+	TotalPriceValue int,
 	PRIMARY KEY(ReserveId)
 	)

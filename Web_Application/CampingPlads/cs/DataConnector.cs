@@ -116,8 +116,8 @@ namespace CampingPlads.cs
             SqlCommand command = new SqlCommand("SitePriceTotal", sqlCon);
 
             command.Parameters.Add("@SiteType", SqlDbType.VarChar).Value = siteType;
-            command.Parameters.Add("@StartDate", SqlDbType.DateTime).Value = startDate;
-            command.Parameters.Add("@EndDate", SqlDbType.DateTime).Value = endDate;
+            command.Parameters.Add("@StartDate", SqlDbType.Date).Value = startDate.Date;
+            command.Parameters.Add("@EndDate", SqlDbType.Date).Value = endDate.Date;
 
             command.Parameters.Add("@ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
 
@@ -132,6 +132,7 @@ namespace CampingPlads.cs
             command.Dispose();
             sqlCon.Close();
 
+            //int totalPrice = 500;
             return totalPrice;
         }
 
@@ -146,8 +147,8 @@ namespace CampingPlads.cs
 
             command.Parameters.Add("@Adults", SqlDbType.TinyInt).Value = adults;
             command.Parameters.Add("@Children", SqlDbType.TinyInt).Value = children;
-            command.Parameters.Add("@StartDate", SqlDbType.DateTime).Value = startDate;
-            command.Parameters.Add("@EndDate", SqlDbType.DateTime).Value = endDate;
+            command.Parameters.Add("@StartDate", SqlDbType.Date).Value = startDate.Date;
+            command.Parameters.Add("@EndDate", SqlDbType.Date).Value = endDate.Date;
 
             command.Parameters.Add("@ReturnValue", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
 
@@ -167,7 +168,7 @@ namespace CampingPlads.cs
         {
             SqlConnection sqlCon = new SqlConnection(vs_TestAdmin);
 
-            SqlCommand command = new SqlCommand("PersonPriceTotal", sqlCon)
+            SqlCommand command = new SqlCommand("AddonPriceTotal", sqlCon)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -237,7 +238,7 @@ namespace CampingPlads.cs
 
             SqlConnection sqlCon = new SqlConnection(vs_TestAdmin);
 
-            SqlCommand command = new SqlCommand("PersonPriceTotal", sqlCon)
+            SqlCommand command = new SqlCommand("InsertFullReservation", sqlCon)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -266,15 +267,18 @@ namespace CampingPlads.cs
             command.Parameters.Add("@AdultWater", SqlDbType.TinyInt).Value = adultWater;
             command.Parameters.Add("@ChildWater", SqlDbType.TinyInt).Value = childWater;
 
-            command.Parameters.Add("@CustomerNr", SqlDbType.Int).Direction = ParameterDirection.Output;
-            command.Parameters.Add("@ReservationId", SqlDbType.Int).Direction = ParameterDirection.Output;
+            command.Parameters.Add("@newCustomerNr", SqlDbType.Int);
+            command.Parameters["@newCustomerNr"].Direction = ParameterDirection.Output;
+
+            command.Parameters.Add("@newReserveId", SqlDbType.Int);
+            command.Parameters["@newReserveId"].Direction = ParameterDirection.Output;
 
             sqlCon.Open();
 
             command.ExecuteNonQuery();
 
-            custNr_reserveId[0] = Convert.ToInt32(command.Parameters["@CustomerNr"].Value);
-            custNr_reserveId[1] = Convert.ToInt32(command.Parameters["@ReservationId"].Value);
+            custNr_reserveId[0] = Convert.ToInt32(command.Parameters["@newCustomerNr"].Value);
+            custNr_reserveId[1] = Convert.ToInt32(command.Parameters["@newReserveId"].Value);
 
             sqlCon.Close();
             command.Dispose();

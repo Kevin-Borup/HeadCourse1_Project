@@ -21,11 +21,25 @@ namespace CampingPlads
         {
             userData.FullName = firstName.Text + " " + lastName.Text;
 
+            bool bedLining = (userData.AddonDetails[1] == 1);
+            bool cleaning = (userData.AddonDetails[2] == 1);
+
+            int? cabinNr = null;
+            int? campsiteNr = null;
+
+            if (userData.SiteType.Contains("Cabin"))
+            {
+                cabinNr = userData.SiteNr;
+            } else
+            {
+                campsiteNr = userData.SiteNr;
+            }
+
             int[] custNr_reserveId = processHandler.InsertCustomerReservation(
                     firstName.Text, lastName.Text, email.Text, phoneNr.Text, Convert.ToDateTime(birthDate.Text),
                     streetName.Text, Convert.ToInt32(buildingNr.Text), city.Text, Convert.ToInt32(postalCode.Text),
                     userData.StartDate, userData.EndDate, userData.AddonDetails[0], userData.AddonDetails[1], userData.SiteType,
-                    userData.AddonDetails[2], userData.AddonDetails[3] == 1, userData.AddonDetails[4] == 1, userData.AddonDetails[5], userData.AddonDetails[6], userData.AddonDetails[7]);
+                    userData.AddonDetails[2], bedLining, cleaning, userData.AddonDetails[5], userData.AddonDetails[6], userData.AddonDetails[7], cabinNr, campsiteNr, userData.SeasonName);
 
             string emailBody = $@"
 
